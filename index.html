@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Le cinéma italien d'après-guerre et Marco Bellocchio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Archivo+Narrow:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=Archivo+Narrow:wght@500;600&amp;display=swap" rel="stylesheet"/>
 <style>
 /* Plan : un long article de revue de cinéma. Colonne de lecture serrée, grandes ouvertures de partie en noir d'écran, filets tricolores, affiches en marge. */
 :root{
@@ -99,6 +100,7 @@ section.chapter{max-width:var(--col);margin:0 auto;padding-top:56px}
 section.chapter h2{font-family:var(--display);font-weight:700;font-size:clamp(32px,4.6vw,46px);line-height:1.05;margin:0 0 22px;text-wrap:balance}
 section.chapter h3{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(22px,2.4vw,27px);line-height:1.2;color:var(--rouge);margin:38px 0 10px;text-wrap:balance;clear:both}
 section.chapter p{margin:0 0 1em;hyphens:auto}
+.lead-in{font-family:var(--display);font-style:italic;font-weight:500;color:var(--rouge);font-size:1.08em}
 .aside{font-size:.88em;color:var(--gris);border-left:2px solid var(--filet);padding-left:14px}
 blockquote.pull{font-family:var(--display);font-style:italic;font-size:clamp(24px,3vw,32px);line-height:1.22;margin:34px 0;padding:0 0 0 22px;border-left:4px solid var(--rouge);text-wrap:balance;clear:both}
 
@@ -119,6 +121,7 @@ aside.box{background:var(--papier);border:1px solid var(--filet);border-top:4px 
 .box-label{font-family:var(--etiquette);text-transform:uppercase;letter-spacing:.14em;font-size:12.5px;color:var(--vert);font-weight:600}
 aside.box h4{font-family:var(--display);font-size:24px;line-height:1.15;margin:6px 0 12px}
 aside.box p{font-size:.95em}
+aside.box ul.frise{margin:8px 0 0}
 .table-wrap{overflow-x:auto;margin:20px 0;clear:both}
 table{border-collapse:collapse;width:100%;font-size:.88em}
 table[style]{font-size:.88em!important}
@@ -152,63 +155,60 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 </style>
 </head>
 <body>
-<div class="progress" id="progress" aria-hidden="true"></div>
+<div aria-hidden="true" class="progress" id="progress"></div>
 <div class="bar">
-  <span class="where" id="where">Fenêtre ouverte sur le cinéma</span>
-  <button type="button" id="open-toc" aria-haspopup="dialog">Sommaire</button>
+<span class="where" id="where">Fenêtre ouverte sur le cinéma</span>
+<button aria-haspopup="dialog" id="open-toc" type="button">Sommaire</button>
 </div>
-
 <header class="hero">
-  <div class="hero-in">
-    <div class="tricolore"><i></i><i></i><i></i></div>
-    <p class="kicker">Formation « Fenêtre ouverte sur le cinéma » 2026-2027</p>
-    <h1>Le cinéma italien d'après-guerre <em>suivi d'un gros plan sur l'œuvre de Marco Bellocchio</em></h1>
-    <p class="dek">Âge d'or, déclin et conscience d'un cinéma, de Rome, ville ouverte à Buongiorno, notte</p>
-    <p class="credit">Cinémathèque française · salle Georges-Franju · 19 et 20 novembre 2026<br>Direction de l'action éducative de la Cinémathèque et DAAC de Versailles<br>Notes de Pierre Pempie</p>
-  </div>
+<div class="hero-in">
+<div class="tricolore"><i></i><i></i><i></i></div>
+<p class="kicker">Formation « Fenêtre ouverte sur le cinéma » 2026-2027</p>
+<h1>Le cinéma italien d'après-guerre <em>suivi d'un gros plan sur l'œuvre de Marco Bellocchio</em></h1>
+<p class="dek">Âge d'or, déclin et conscience d'un cinéma, de Rome, ville ouverte à Buongiorno, notte</p>
+<p class="credit">Cinémathèque française · salle Georges-Franju · 19 et 20 novembre 2026<br/>Direction de l'action éducative de la Cinémathèque et DAAC de Versailles<br/>Notes de Pierre Pempie</p>
+</div>
 </header>
-
-<nav class="toc-top" aria-label="Sommaire">
-  <h2>Sommaire</h2>
-  <div class="cols">
-    <ol><li class="t-part"><a href="#avant-propos">Avant-propos</a></li>
+<nav aria-label="Sommaire" class="toc-top">
+<h2>Sommaire</h2>
+<div class="cols">
+<ol><li class="t-part"><a href="#avant-propos">Avant-propos</a></li>
 <li class="t-part"><a href="#partie-1"><span>I</span>Pour quelques lires de plus</a></li>
 <li class="t-ch"><a href="#chapitre-01"><span>01</span>Des origines au fascisme</a></li>
-<li class="t-ch"><a href="#chapitre-02"><span>02</span>L&#x27;après-guerre : néoréalisme et évasion</a></li>
-<li class="t-ch"><a href="#chapitre-03"><span>03</span>Comédie à l&#x27;italienne et système des filons</a></li>
+<li class="t-ch"><a href="#chapitre-02"><span>02</span>L'après-guerre : néoréalisme et évasion</a></li>
+<li class="t-ch"><a href="#chapitre-03"><span>03</span>Comédie à l'italienne et système des filons</a></li>
 <li class="t-ch"><a href="#chapitre-04"><span>04</span>Le déclin : la faute de Berlusconi ?</a></li>
-<li class="t-part"><a href="#partie-2"><span>II</span>L&#x27;après-guerre : l&#x27;arte di arrangiarsi</a></li>
+<li class="t-part"><a href="#partie-2"><span>II</span>L'après-guerre : l'arte di arrangiarsi</a></li>
 <li class="t-ch"><a href="#chapitre-05"><span>05</span>Du fascisme au néoréalisme</a></li>
 <li class="t-ch"><a href="#chapitre-06"><span>06</span>Rome, ville ouverte</a></li>
 <li class="t-ch"><a href="#chapitre-07"><span>07</span>La fin du néoréalisme</a></li>
 <li class="t-ch"><a href="#chapitre-08"><span>08</span>Italie du Nord, Italie du Sud</a></li>
 <li class="t-ch"><a href="#chapitre-09"><span>09</span>Naples, deux fois</a></li></ol>
-    <ol><li class="t-part"><a href="#partie-3"><span>III</span>Gros plan : Buongiorno, notte</a></li>
+<ol><li class="t-part"><a href="#partie-3"><span>III</span>Gros plan : Buongiorno, notte</a></li>
 <li class="t-ch"><a href="#chapitre-10"><span>10</span>Après le néoréalisme</a></li>
 <li class="t-ch"><a href="#chapitre-11"><span>11</span>Les années de plomb</a></li>
-<li class="t-ch"><a href="#chapitre-12"><span>12</span>L&#x27;affaire Moro</a></li>
+<li class="t-ch"><a href="#chapitre-12"><span>12</span>L'affaire Moro</a></li>
 <li class="t-ch"><a href="#chapitre-13"><span>13</span>Les entrées du film</a></li>
 <li class="t-ch"><a href="#chapitre-14"><span>14</span>Quelque chose de la cellule</a></li>
 <li class="t-ch"><a href="#chapitre-15"><span>15</span>Le cinéma comme medium</a></li>
-<li class="t-part"><a href="#partie-4"><span>IV</span>Marco Bellocchio ou l&#x27;Italie désaccordée</a></li>
-<li class="t-ch"><a href="#chapitre-16"><span>16</span>Un cinéaste dans l&#x27;histoire</a></li>
+<li class="t-part"><a href="#partie-4"><span>IV</span>Marco Bellocchio ou l'Italie désaccordée</a></li>
+<li class="t-ch"><a href="#chapitre-16"><span>16</span>Un cinéaste dans l'histoire</a></li>
 <li class="t-ch"><a href="#chapitre-17"><span>17</span>Les années de révolte</a></li>
 <li class="t-ch"><a href="#chapitre-18"><span>18</span>Le rêve et le désir</a></li>
-<li class="t-ch"><a href="#chapitre-19"><span>19</span>L&#x27;Italie mise en scène</a></li>
+<li class="t-ch"><a href="#chapitre-19"><span>19</span>L'Italie mise en scène</a></li>
 <li class="t-ch"><a href="#chapitre-20"><span>20</span>Soixante ans de cinéma</a></li>
 <li class="t-part"><a href="#conclusion">Conclusion générale</a></li>
 <li class="t-part"><a href="#annexes">Annexes</a></li></ol>
-  </div>
+</div>
 </nav>
-
 <div class="layout">
-  <nav class="toc" aria-label="Sommaire"><ol><li class="t-part"><a href="#avant-propos">Avant-propos</a></li>
+<nav aria-label="Sommaire" class="toc"><ol><li class="t-part"><a href="#avant-propos">Avant-propos</a></li>
 <li class="t-part"><a href="#partie-1"><span>I</span>Pour quelques lires de plus</a></li>
 <li class="t-ch"><a href="#chapitre-01"><span>01</span>Des origines au fascisme</a></li>
-<li class="t-ch"><a href="#chapitre-02"><span>02</span>L&#x27;après-guerre : néoréalisme et évasion</a></li>
-<li class="t-ch"><a href="#chapitre-03"><span>03</span>Comédie à l&#x27;italienne et système des filons</a></li>
+<li class="t-ch"><a href="#chapitre-02"><span>02</span>L'après-guerre : néoréalisme et évasion</a></li>
+<li class="t-ch"><a href="#chapitre-03"><span>03</span>Comédie à l'italienne et système des filons</a></li>
 <li class="t-ch"><a href="#chapitre-04"><span>04</span>Le déclin : la faute de Berlusconi ?</a></li>
-<li class="t-part"><a href="#partie-2"><span>II</span>L&#x27;après-guerre : l&#x27;arte di arrangiarsi</a></li>
+<li class="t-part"><a href="#partie-2"><span>II</span>L'après-guerre : l'arte di arrangiarsi</a></li>
 <li class="t-ch"><a href="#chapitre-05"><span>05</span>Du fascisme au néoréalisme</a></li>
 <li class="t-ch"><a href="#chapitre-06"><span>06</span>Rome, ville ouverte</a></li>
 <li class="t-ch"><a href="#chapitre-07"><span>07</span>La fin du néoréalisme</a></li>
@@ -217,33 +217,34 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <li class="t-part"><a href="#partie-3"><span>III</span>Gros plan : Buongiorno, notte</a></li>
 <li class="t-ch"><a href="#chapitre-10"><span>10</span>Après le néoréalisme</a></li>
 <li class="t-ch"><a href="#chapitre-11"><span>11</span>Les années de plomb</a></li>
-<li class="t-ch"><a href="#chapitre-12"><span>12</span>L&#x27;affaire Moro</a></li>
+<li class="t-ch"><a href="#chapitre-12"><span>12</span>L'affaire Moro</a></li>
 <li class="t-ch"><a href="#chapitre-13"><span>13</span>Les entrées du film</a></li>
 <li class="t-ch"><a href="#chapitre-14"><span>14</span>Quelque chose de la cellule</a></li>
 <li class="t-ch"><a href="#chapitre-15"><span>15</span>Le cinéma comme medium</a></li>
-<li class="t-part"><a href="#partie-4"><span>IV</span>Marco Bellocchio ou l&#x27;Italie désaccordée</a></li>
-<li class="t-ch"><a href="#chapitre-16"><span>16</span>Un cinéaste dans l&#x27;histoire</a></li>
+<li class="t-part"><a href="#partie-4"><span>IV</span>Marco Bellocchio ou l'Italie désaccordée</a></li>
+<li class="t-ch"><a href="#chapitre-16"><span>16</span>Un cinéaste dans l'histoire</a></li>
 <li class="t-ch"><a href="#chapitre-17"><span>17</span>Les années de révolte</a></li>
 <li class="t-ch"><a href="#chapitre-18"><span>18</span>Le rêve et le désir</a></li>
-<li class="t-ch"><a href="#chapitre-19"><span>19</span>L&#x27;Italie mise en scène</a></li>
+<li class="t-ch"><a href="#chapitre-19"><span>19</span>L'Italie mise en scène</a></li>
 <li class="t-ch"><a href="#chapitre-20"><span>20</span>Soixante ans de cinéma</a></li>
 <li class="t-part"><a href="#conclusion">Conclusion générale</a></li>
 <li class="t-part"><a href="#annexes">Annexes</a></li></ol></nav>
-  <main id="main">
+<main id="main">
 <section class="chapter" id="avant-propos"><h2>Avant-propos</h2>
 <p>Ces pages sont nées de deux journées de formation à la Cinémathèque française, les 19 et 20 novembre 2026, dans le cadre de « Fenêtre ouverte sur le cinéma », organisée avec la Délégation académique à l'action culturelle de Versailles. Elles partent de notes prises à la volée, au téléphone, dans le noir de la salle Georges-Franju.</p>
 <p>Quatre séances les organisent. Le matin du jeudi, Joël Augros a proposé une lecture socio-économique du cinéma italien, de son âge d'or à son déclin. L'après-midi, Aurore Renaut a revisité l'après-guerre sous l'angle de l'arte di arrangiarsi, l'art de se débrouiller. Le vendredi enfin, <em>Buongiorno, notte</em> de Marco Bellocchio, projeté en entier le matin, puis, l'après-midi, la traversée de toute son œuvre par Mathieu Macheret.</p>
+<p>Chaque partie suit une intervention ; les remarques à la première personne sont les miennes, et les encadrés ajoutent du contexte.</p>
 <p>Le fil qui les relie tient en quatre temps. Le néoréalisme naît après la guerre comme une réaction vitale. Le genre et les filons s'en emparent et l'hybrident. La télévision de Berlusconi achève de l'éteindre. Et Bellocchio le réanime, pour psychanalyser l'Italie.</p>
 </section>
-<header class="part" id="partie-1"><div class="part-in"><div class="tricolore"><i></i><i></i><i></i></div><p class="part-kicker">Première partie</p><h2 class="part-title">Pour quelques <br><em>lires de plus</em></h2><p class="part-sub">Une économie politique du cinéma italien, de l'âge d'or au déclin des années 70</p><p class="part-credit">Intervention de Joël Augros (Sorbonne Nouvelle, IRCAV)<br/>Jeudi 19 novembre 2026, matin</p></div></header>
+<header class="part" id="partie-1"><div class="part-in"><div class="tricolore"><i></i><i></i><i></i></div><p class="part-kicker">Première partie</p><h2 class="part-title">Pour quelques <br/><em>lires de plus</em></h2><p class="part-sub">Une économie politique du cinéma italien, de l'âge d'or au déclin des années 70</p><p class="part-credit">Intervention de Joël Augros (Sorbonne Nouvelle, IRCAV)<br/>Jeudi 19 novembre 2026, matin</p></div></header>
 <section class="chapter">
 <h3>Pas de café, un Padlet et Belmondo</h3>
 <p>Quelques remarques d'ambiance d'abord : pas de café dans la salle de ciné, un Padlet pour accompagner la séance (c'est laid cette techno, non ?), et une expo en ce moment sur Jean-Paul Belmondo, rien à voir donc.</p>
-<h3>Pourquoi le cinéma italien ?</h3>
-<p>Parce que c'est un cinéma qui a connu un âge d'or, très commercial et d'autres, et qui est plus discret aujourd'hui. Un cinéma qui a su être contemporain de l'histoire de l'Italie, et qui raconte aussi la diversité de ses territoires : Rome et Milan, Naples et la Sicile, la plaine du Pô et les villes ouvrières du Nord.</p>
+
+<p><b class="lead-in">Pourquoi le cinéma italien ?.</b> Parce que c'est un cinéma qui a connu un âge d'or, très commercial et d'autres, et qui est plus discret aujourd'hui. Un cinéma qui a su être contemporain de l'histoire de l'Italie, et qui raconte aussi la diversité de ses territoires : Rome et Milan, Naples et la Sicile, la plaine du Pô et les villes ouvrières du Nord.</p>
 <p>Il fut longtemps aussi important que le cinéma américain, en nombre de films, de salles et de spectateurs. C'est cette puissance, puis son effondrement, que la matinée propose de comprendre.</p>
-<h3>Un contre-modèle</h3>
-<p>Le fil de la séance : un premier regard de l'après-guerre jusqu'au déclin des années 70, avec une question en toile de fond. Le cinéma italien comme contre-modèle, ou comment la télévision a tué le cinéma. C'est la thèse qu'on lisait en France dans les revues de cinéma des années 80 : regardez l'Italie, voilà ce qui nous attend si l'on libère la télévision.</p>
+
+<p><b class="lead-in">Un contre-modèle.</b> Le fil de la séance : un premier regard de l'après-guerre jusqu'au déclin des années 70, avec une question en toile de fond. Le cinéma italien comme contre-modèle, ou comment la télévision a tué le cinéma. C'est la thèse qu'on lisait en France dans les revues de cinéma des années 80 : regardez l'Italie, voilà ce qui nous attend si l'on libère la télévision.</p>
 <p>Joël Augros, économiste du cinéma, va nuancer cette évidence. Mais il ouvre par une provocation.</p>
 <blockquote class="pull">« L'Italie est un pays agricole, quel besoin a-t-elle du cinéma ? »</blockquote>
 <p class="aside">L'amiral Stone, américain, à la tête de la commission de contrôle alliée après la guerre. Toute l'histoire qui suit peut se lire comme une réponse.</p>
@@ -251,76 +252,74 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <section class="chapter" id="chapitre-01"><p class="ch-num">Chapitre 01</p><h2>Des origines au fascisme</h2>
 <p>L'amiral aurait pu se renseigner. Dès 1910, un afflux de capitaux vient contredire son mépris avant l'heure : les grandes maisons de production de Turin, de Rome et de Milan font du cinéma italien l'un des premiers du monde.</p>
 <p>L'Italie est même le premier pays à passer au long métrage, avec ses grandes fresques antiques. La plus célèbre, <em>Cabiria</em> (Giovanni Pastrone, 1914), avec ses intertitres signés Gabriele D'Annunzio, ses décors monumentaux et ses travellings, impressionnera jusqu'à Hollywood.</p>
-<figure class="poster"><img src="img/cabiria.jpg" alt="Affiche de Cabiria" loading="lazy"><figcaption>Cabiria (Giovanni Pastrone, 1914), affiche d'une réédition américaine : « A New Edition of D'Annunzio's Masterpiece ».</figcaption></figure>
+<figure class="poster"><img alt="Affiche de Cabiria" loading="lazy" src="img/cabiria.jpg"/><figcaption>Cabiria (Giovanni Pastrone, 1914), affiche d'une réédition américaine : « A New Edition of D'Annunzio's Masterpiece ».</figcaption></figure>
 <p>Puis vient l'effondrement des années 20, brutal. Il laisse la place à un cinéma étranger, parfois tourné en Italie même, qui profite des paysages et des studios d'un pays qui ne produit presque plus.</p>
 <aside class="box"><span class="box-label">Encadré</span><h4>Pourquoi l'effondrement des années 20 ?</h4><p><b>Une concurrence écrasante.</b> Après la Première Guerre mondiale, la concurrence américaine et européenne manque de détruire l'industrie italienne : de 220 films produits en 1920 à moins d'une douzaine en 1927.</p><p><b>Un pari industriel raté.</b> En 1919, onze grandes sociétés se regroupent dans l'Unione Cinematografica Italiana (UCI) pour mieux résister.</p><p><b>Un krach.</b> En 1921, la Banca Italiana di Sconto, principal soutien de l'UCI, fait faillite. Le consortium sombre en 1926.</p><p><b>Des recettes d'avant-guerre.</b> On refait des fresques antiques pour retrouver le succès d'avant 1914, faute de financement et de renouvellement artistique.</p></aside>
 <h3>Le cinéma, « l'arme la plus forte »</h3>
 <p>Arrivent alors les fascistes au pouvoir. Ils comprennent vite ce que le cinéma peut faire. Ils instituent un organisme de censure et limitent les films étrangers, avec des quotas jusqu'en 1929.</p>
 <p>Mussolini le dit et le fait inscrire en grand : « le cinéma est l'arme la plus forte ». Un slogan qui le rend conciliant avec les autres « grands » de son temps, Atatürk, le pape, tous ceux qui ont compris que l'image gouverne.</p>
 <p>Conséquence : une politique de studios, dont le fleuron est Cinecittà, inaugurée en 1937 aux portes de Rome, et qui existe toujours. Les années d'autarcie dotent le pays d'un outil industriel complet.</p>
-<h3>Les téléphones blancs</h3>
-<p>Le cinéma propre à l'époque, c'est celui des <b>téléphones blancs</b>. Des comédies sentimentales situées dans un monde de grands hôtels et d'appartements modernes, où le téléphone blanc, objet rare et luxueux, signe la richesse. Un cinéma pour faire oublier, qui évite soigneusement la misère, la politique et le réel.</p>
+
+<p><b class="lead-in">Les téléphones blancs.</b> Le cinéma propre à l'époque, c'est celui des <b>téléphones blancs</b>. Des comédies sentimentales situées dans un monde de grands hôtels et d'appartements modernes, où le téléphone blanc, objet rare et luxueux, signe la richesse. Un cinéma pour faire oublier, qui évite soigneusement la misère, la politique et le réel.</p>
 <p>Puis la guerre : bombardement de Rome et débarquement des Alliés en 1943. Cinecittà est pillée, bombardée, puis transformée en camp de réfugiés.</p>
-<blockquote class="pull">Un cinéma pour faire oublier.</blockquote>
 </section>
 <section class="chapter" id="chapitre-02"><p class="ch-num">Chapitre 02</p><h2>L'après-guerre : néoréalisme et évasion</h2>
 <p>Le renouvellement se fait malgré le pillage et le bombardement de Cinecittà. C'est l'avènement d'un <b>néoréalisme</b> qui tourne dans la rue, avec des inconnus, sur la misère et la guerre. <em>Rome, ville ouverte</em> en est l'acte de naissance.</p>
 <p>Mais il faut le dire : il n'aura de succès que grâce à son succès à l'étranger. En Italie, il passe après les films mélodramatiques et musicaux. La légende a retenu Rossellini ; le box-office, Matarazzo.</p>
-<figure class="poster"><img src="img/rome-ville-ouverte.jpg" alt="Affiche de Rome, ville ouverte" loading="lazy"><figcaption>Rome, ville ouverte (Roberto Rossellini, 1945), affiche française, avec Aldo Fabrizi et Anna Magnani.</figcaption></figure>
+<figure class="poster"><img alt="Affiche de Rome, ville ouverte" loading="lazy" src="img/rome-ville-ouverte.jpg"/><figcaption>Rome, ville ouverte (Roberto Rossellini, 1945), affiche française, avec Aldo Fabrizi et Anna Magnani.</figcaption></figure>
 <h3>Premier extrait : Bannie du foyer</h3>
 <p>Le premier extrait de la matinée le montre : ce n'est pas le néoréalisme qui remplit les salles d'après-guerre, c'est le mélodrame. <em>Bannie du foyer</em> (Raffaello Matarazzo, 1950), avec le couple Amedeo Nazzari et Yvonne Sanson, en est l'archétype : une femme injustement chassée, des larmes, une réconciliation.</p>
 <p>Ça se termine bien, malgré le titre. En 1949-50, c'est la deuxième meilleure entrée de la saison (pas de film en été : les salles ferment ou se vident à la chaleur).</p>
-<figure class="poster"><img src="img/tormento.jpg" alt="Affiche de Tormento" loading="lazy"><figcaption>Tormento, titre italien de Bannie du foyer (Raffaello Matarazzo, 1950), avec Amedeo Nazzari et Yvonne Sanson.</figcaption></figure>
-<h3>L'héritage paradoxal de l'autarcie</h3>
-<p>Ce rebond s'explique aussi par un héritage gênant : celui des années d'autarcie fasciste, qui ont laissé des capacités de production. Le régime a formé des techniciens, construit des studios, créé une école de cinéma.</p>
+<figure class="poster"><img alt="Affiche de Tormento" loading="lazy" src="img/tormento.jpg"/><figcaption>Tormento, titre italien de Bannie du foyer (Raffaello Matarazzo, 1950), avec Amedeo Nazzari et Yvonne Sanson.</figcaption></figure>
+
+<p><b class="lead-in">L'héritage paradoxal de l'autarcie.</b> Ce rebond s'explique aussi par un héritage gênant : celui des années d'autarcie fasciste, qui ont laissé des capacités de production. Le régime a formé des techniciens, construit des studios, créé une école de cinéma.</p>
 <p>Et l'Italie est un pays moins centralisé que la France. Là où le cinéma français se concentre à Paris, de nombreuses villes italiennes sont équipées, avec leur panel de personnel artistique : Turin, Milan, Naples ont leurs studios, leurs acteurs, leurs dialectes.</p>
 <p>En 1948, Cinecittà rouvre : une quarantaine de films y sont tournés par an.</p>
-<h3>Andreotti et la double censure</h3>
-<p>Giulio Andreotti, plein de fois ministre de plein de choses, est alors sous-secrétaire chargé du spectacle. Il est à l'origine de la loi de 1949 sur le cinéma, qui met en place un système d'aides : crédit d'État, primes proportionnelles aux recettes, quotas de programmation pour les films italiens.</p>
+
+<p><b class="lead-in">Andreotti et la double censure.</b> Giulio Andreotti, plein de fois ministre de plein de choses, est alors sous-secrétaire chargé du spectacle. Il est à l'origine de la loi de 1949 sur le cinéma, qui met en place un système d'aides : crédit d'État, primes proportionnelles aux recettes, quotas de programmation pour les films italiens.</p>
 <p>Par cette voie, la loi institue une forme de censure qui s'ajoute à la censure officielle : un film qui déplaît n'est pas interdit, il n'est simplement pas aidé, ou pas autorisé à l'exportation. Andreotti reprochera à <em>Umberto D.</em> de De Sica de donner une mauvaise image du pays : « le linge sale se lave en famille ».</p>
 <p>La critique de gauche, elle aussi, va critiquer le néoréalisme quand il s'échappe du réalisme socialiste. Pris entre deux feux.</p>
 <h3>Un cinéma d'évasion</h3>
 <p>Résultat : surtout un <b>cinéma d'évasion</b>. Voilà ce que produit cette politique cinématographique. Les aides récompensant le succès en salles, elles récompensent ce qui plaît : la comédie, le mélodrame, le film en costumes.</p>
-<h3>Un pays de salles</h3>
-<p>Les salles se multiplient : 16 000, contre 5 000 en France. Beaucoup sont des salles paroissiales, tenues par l'Église (pensez à <em>Cinema Paradiso</em> et à son curé qui coupe les baisers). En réalité, 7 000 seulement relèvent de l'exploitation commerciale.</p>
+
+<p><b class="lead-in">Un pays de salles.</b> Les salles se multiplient : 16 000, contre 5 000 en France. Beaucoup sont des salles paroissiales, tenues par l'Église (pensez à <em>Cinema Paradiso</em> et à son curé qui coupe les baisers). En réalité, 7 000 seulement relèvent de l'exploitation commerciale.</p>
 <p>Toujours est-il que le pays a une immense capacité d'absorption des films.</p>
-<h3>Le retour des stars</h3>
-<p>La production est relancée, comme partout en Europe. Joël Augros ne mentionne pas le <em>trade follows film</em>, ce principe américain selon lequel le commerce suit le film : en montrant des réfrigérateurs et des voitures, Hollywood vend aussi le mode de vie américain. L'Italie, elle, vend ses paysages et ses actrices.</p>
+
+<p><b class="lead-in">Le retour des stars.</b> La production est relancée, comme partout en Europe. Joël Augros ne mentionne pas le <em>trade follows film</em>, ce principe américain selon lequel le commerce suit le film : en montrant des réfrigérateurs et des voitures, Hollywood vend aussi le mode de vie américain. L'Italie, elle, vend ses paysages et ses actrices.</p>
 <p>C'est ainsi le retour du star-système, et de ses plantureuses, Gina Lollobrigida en tête.</p>
 <p><em>Pain, amour et fantaisie</em> (Luigi Comencini, 1953) : c'est le <b>néoréalisme rose</b>. La pauvreté du pays est évoquée, le village, les carabiniers, la faim même, mais sur fond de romance et, donc, de plantureuse.</p>
-<figure class="poster"><img src="img/pain-amour.jpg" alt="Affiche de Pain, amour et jalousie" loading="lazy"><figcaption>Pain, amour et jalousie (Luigi Comencini, 1954), la suite de Pain, amour et fantaisie, avec Vittorio De Sica et Gina Lollobrigida.</figcaption></figure>
+<figure class="poster"><img alt="Affiche de Pain, amour et jalousie" loading="lazy" src="img/pain-amour.jpg"/><figcaption>Pain, amour et jalousie (Luigi Comencini, 1954), la suite de Pain, amour et fantaisie, avec Vittorio De Sica et Gina Lollobrigida.</figcaption></figure>
 <h3>Les plantureuses</h3>
-<div class="gallery"><img src="img/photo1.jpg" alt="Portrait 1" loading="lazy"><img src="img/photo2.jpg" alt="Portrait 2" loading="lazy"><img src="img/photo3.jpg" alt="Portrait 3" loading="lazy"></div>
-<div class="gallery"><img src="img/photo4.jpg" alt="Portrait 4" loading="lazy"><img src="img/photo5.jpg" alt="Portrait 5" loading="lazy"></div>
+<div class="gallery"><img alt="Portrait 1" loading="lazy" src="img/photo1.jpg"/><img alt="Portrait 2" loading="lazy" src="img/photo2.jpg"/><img alt="Portrait 3" loading="lazy" src="img/photo3.jpg"/></div>
+<div class="gallery"><img alt="Portrait 4" loading="lazy" src="img/photo4.jpg"/><img alt="Portrait 5" loading="lazy" src="img/photo5.jpg"/></div>
 <p class="aside">Galerie des plantureuses : le star-système revenu avec la relance de l'après-guerre. Des visages sans nom, à chacun de les reconnaître.</p>
 </section>
 <section class="chapter" id="chapitre-03"><p class="ch-num">Chapitre 03</p><h2>Comédie à l'italienne et système des filons</h2>
 <p>Deuxième extrait : <em>Gendarmes et voleurs</em> (Steno et Mario Monicelli, 1951), avec Totò en voleur et Aldo Fabrizi en gendarme, liés par une même pauvreté. Dans la même veine que <em>Totò le Mokò</em>, parodie de <em>Pépé le Moko</em>, visible en entier sur YouTube.</p>
 <p>C'est le deuxième temps de l'histoire : le genre s'empare de la source vive néoréaliste. Totò est le grand corps comique de l'après-guerre : un prince napolitain devenu masque de la débrouille, qui traverse des dizaines de films par an.</p>
-<figure class="poster"><img src="img/guardie-e-ladri.jpg" alt="Affiche de Guardie e ladri" loading="lazy"><figcaption>Guardie e ladri, Gendarmes et voleurs (Steno et Monicelli), avec Totò et Aldo Fabrizi.</figcaption></figure>
+<figure class="poster"><img alt="Affiche de Guardie e ladri" loading="lazy" src="img/guardie-e-ladri.jpg"/><figcaption>Guardie e ladri, Gendarmes et voleurs (Steno et Monicelli), avec Totò et Aldo Fabrizi.</figcaption></figure>
 <h3>Extrait 7 : Le Pigeon</h3>
 <p>Sept ans plus tard, la comédie a trouvé sa forme. <em>Le Pigeon</em> (Mario Monicelli, 1958), c'est le néoréalisme qui rencontre le film de gangsters. Une bande de pieds nickelés romains prépare le casse du siècle, à la manière de <em>Du rififi chez les hommes</em>, et échoue à tout.</p>
 <p>Les décors sont ceux du néoréalisme, les faubourgs, la misère ; la structure est celle du film noir ; le ton est celui de la comédie. C'est la naissance de ce qu'on appellera la comédie à l'italienne. La deuxième partie y reviendra.</p>
-<figure class="poster"><img src="img/le-pigeon.jpg" alt="Affiche du Pigeon" loading="lazy"><figcaption>Le Pigeon (Mario Monicelli, 1958), affiche de la ressortie française.</figcaption></figure>
-<div class="pair"><figure><img src="img/toto-le-moko.jpg" alt="Affiche de Totò le Mokò" loading="lazy"><figcaption>Totò le Mokò (Carlo Ludovico Bragaglia, 1949).</figcaption></figure><figure><img src="img/i-mostri.jpg" alt="Affiche de I mostri" loading="lazy"><figcaption>I mostri, Les Monstres (Dino Risi, 1963).</figcaption></figure></div>
-<h3>Les Monstres</h3>
-<p>Après le rire de la misère, le rire de la prospérité. Au retour de la pause, un extrait des <em>Monstres</em> (Dino Risi, 1963), que j'ai très envie d'aller voir. Une vingtaine de sketches où Vittorio Gassman et Ugo Tognazzi incarnent toute la galerie de l'Italie du miracle économique : lâches, vaniteux, profiteurs, odieux et drôles à la fois.</p>
+<figure class="poster"><img alt="Affiche du Pigeon" loading="lazy" src="img/le-pigeon.jpg"/><figcaption>Le Pigeon (Mario Monicelli, 1958), affiche de la ressortie française.</figcaption></figure>
+<div class="pair"><figure><img alt="Affiche de Totò le Mokò" loading="lazy" src="img/toto-le-moko.jpg"/><figcaption>Totò le Mokò (Carlo Ludovico Bragaglia, 1949).</figcaption></figure><figure><img alt="Affiche de I mostri" loading="lazy" src="img/i-mostri.jpg"/><figcaption>I mostri, Les Monstres (Dino Risi, 1963).</figcaption></figure></div>
+
+<p><b class="lead-in">Les Monstres.</b> Après le rire de la misère, le rire de la prospérité. Au retour de la pause, un extrait des <em>Monstres</em> (Dino Risi, 1963), que j'ai très envie d'aller voir. Une vingtaine de sketches où Vittorio Gassman et Ugo Tognazzi incarnent toute la galerie de l'Italie du miracle économique : lâches, vaniteux, profiteurs, odieux et drôles à la fois.</p>
 <p>Le film aura fait un petit, <em>Les Nouveaux Monstres</em>, en 1977. Entre les deux, la comédie s'est assombrie au rythme du pays.</p>
-<blockquote class="pull">Rire de soi, jusqu'à la cruauté.</blockquote>
-<h3>Des lois pour sauver le cinéma</h3>
-<p>Derrière les films, une économie. Face à l'hécatombe des spectateurs qui commence dans les années 60, des lois sont votées partout en Europe pour aider le cinéma. Seulement, en Italie, la Démocratie chrétienne s'intéresse de plus en plus à la télévision, qu'elle contrôle par la RAI, et de moins en moins au cinéma.</p>
+
+<p><b class="lead-in">Des lois pour sauver le cinéma.</b> Derrière les films, une économie. Face à l'hécatombe des spectateurs qui commence dans les années 60, des lois sont votées partout en Europe pour aider le cinéma. Seulement, en Italie, la Démocratie chrétienne s'intéresse de plus en plus à la télévision, qu'elle contrôle par la RAI, et de moins en moins au cinéma.</p>
 <p>Dernière grande loi, la loi Corona. Avant elle, une loi estimait à 50 % la part de participants italiens nécessaire pour considérer un film comme italien et lui donner accès aux aides. Cela devient 100 %.</p>
 <p>Conséquence : cela va signer le départ des Américains du cinéma italien. Hollywood, qui tournait à Cinecittà ses péplums et coproduisait volontiers, n'y trouve plus son compte.</p>
 <h3>Un mot sur les producteurs</h3>
 <p>Ils sont à la fois une des qualités et une des faiblesses du cinéma italien. Une qualité, parce que ce sont de grandes figures : Carlo Ponti, Dino De Laurentiis, Alberto Grimaldi, des joueurs qui misent gros et savent vendre à l'étranger.</p>
 <p>Un défaut, parce qu'ils sont en recherche permanente de <b>filon</b>, le filon d'or qu'on exploite jusqu'à épuisement, notamment à travers la question du genre.</p>
 <p>Le genre, c'est ce qui rend le cinéma italien exportable : un western ou un film d'horreur se vendent partout. Et c'est aussi ce qui permet sa meilleure instrumentalisation, son exploitation commerciale la plus rapide.</p>
-<h3>De petites sociétés qui prennent les couloirs</h3>
-<p>Derrière les grands producteurs, de petites sociétés extrêmement réactives, qui prennent les couloirs dès qu'un succès apparaît. Exemple : la <em>Trilogie de la vie</em> de Pasolini, produite par Alberto Grimaldi : <em>Le Décaméron</em> (1971), <em>Les Contes de Canterbury</em> (1972), <em>Les Mille et Une Nuits</em> (1974).</p>
+
+<p><b class="lead-in">De petites sociétés qui prennent les couloirs.</b> Derrière les grands producteurs, de petites sociétés extrêmement réactives, qui prennent les couloirs dès qu'un succès apparaît. Exemple : la <em>Trilogie de la vie</em> de Pasolini, produite par Alberto Grimaldi : <em>Le Décaméron</em> (1971), <em>Les Contes de Canterbury</em> (1972), <em>Les Mille et Une Nuits</em> (1974).</p>
 <p>Les deux premiers vont très bien marcher, et dans leur sillon tout un tas de films vont se créer, dans l'immédiate suite du succès, parfois simplement quelques mois après, et en série. Comme aujourd'hui les <em>direct-to-video</em>.</p>
-<figure class="poster"><img src="img/decameron.jpg" alt="Affiche du Décaméron" loading="lazy"><figcaption>Le Décaméron (Pier Paolo Pasolini, 1971), premier volet de la Trilogie de la vie, affiche américaine.</figcaption></figure>
-<h3>Le filon, spécificité italienne</h3>
-<p>La spécificité de ce cinéma italien, c'est la <b>rapidité</b>. Le filon, c'est le genre, mais en plus flou : on n'a pas le temps d'établir un canon, de fixer les règles comme Hollywood l'a fait pour le western. Chaque film imite le précédent en le déformant. Une dérive perpétuelle.</p>
+<figure class="poster"><img alt="Affiche du Décaméron" loading="lazy" src="img/decameron.jpg"/><figcaption>Le Décaméron (Pier Paolo Pasolini, 1971), premier volet de la Trilogie de la vie, affiche américaine.</figcaption></figure>
+
+<p><b class="lead-in">Le filon, spécificité italienne.</b> La spécificité de ce cinéma italien, c'est la <b>rapidité</b>. Le filon, c'est le genre, mais en plus flou : on n'a pas le temps d'établir un canon, de fixer les règles comme Hollywood l'a fait pour le western. Chaque film imite le précédent en le déformant. Une dérive perpétuelle.</p>
 <p>Ainsi du western spaghetti, du péplum, du film d'horreur gothique, du polar. Et ainsi de la comédie érotique italienne, déclinée du <em>Décaméron</em> et des <em>Contes de Canterbury</em> : moines lubriques et épouses délaissées, des films qui remplissent les salles. Un cinéma d'exploitation, qui ne devait pas passer dans les cinémas paroissiaux.</p>
 </section>
 <section class="chapter" id="chapitre-04"><p class="ch-num">Chapitre 04</p><h2>Le déclin : la faute de Berlusconi ?</h2>
@@ -330,61 +329,60 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <h3>La naissance des télés privées</h3>
 <p>En 1976, en Italie, la Cour constitutionnelle autorise les chaînes hertziennes locales (et pas seulement le câble). Jusque-là, la RAI avait le monopole.</p>
 <p>À partir de là, floraison de petites chaînes, portées par des associations, des partis politiques, des commerçants. Et notamment par Silvio Berlusconi, d'abord promoteur immobilier : il construit Milano 2, une ville nouvelle aux portes de Milan, qu'il va câbler pour ses habitants. Son logo de Milano 2 sera repris pour se transformer en Canale 5.</p>
-<h3>Nationales sans le dire</h3>
-<p>La loi n'autorise que le local. Alors les chaînes locales vont, petit à petit, se synchroniser pour devenir nationales sans le dire : les mêmes programmes, diffusés à la même heure par des dizaines d'émetteurs, grâce à des cassettes envoyées partout.</p>
+
+<p><b class="lead-in">Nationales sans le dire.</b> La loi n'autorise que le local. Alors les chaînes locales vont, petit à petit, se synchroniser pour devenir nationales sans le dire : les mêmes programmes, diffusés à la même heure par des dizaines d'émetteurs, grâce à des cassettes envoyées partout.</p>
 <p>Cette multiplication aboutit à une solidification autour d'un trio, puis d'un <b>duopole</b> : la RAI publique, et les chaînes de Berlusconi, Canale 5, Italia 1 et Rete 4.</p>
-<blockquote class="pull">Le local devenu national, par la cassette.</blockquote>
-<h3>Des films aux programmes</h3>
-<p>La RAI, financée par la redevance et contrôlée par la Démocratie chrétienne, limitait le nombre de films montrés. Avec l'arrivée des télés privées, on ouvre les vannes : en dix ans, on passe de 173 heures de films dans l'année à dix fois plus, et sur les télés privées c'est encore plus. Des catalogues entiers sont rachetés.</p>
+
+<p><b class="lead-in">Des films aux programmes.</b> La RAI, financée par la redevance et contrôlée par la Démocratie chrétienne, limitait le nombre de films montrés. Avec l'arrivée des télés privées, on ouvre les vannes : en dix ans, on passe de 173 heures de films dans l'année à dix fois plus, et sur les télés privées c'est encore plus. Des catalogues entiers sont rachetés.</p>
 <p>Seulement, ce ne sont pas tant les films qui font vendre. Bien plus le sport, et les animateurs vedettes de la RAI rachetés par Berlusconi : double astuce décisive.</p>
 <h3>La culture de programme</h3>
 <p>Ce sont donc plus les <b>programmes</b> que les films qui font concurrence au cinéma. Stiegler aurait des choses à dire là-dessus, et il en a dit : le passage à une culture de programme, c'est-à-dire de grille, de tranches de marché, de rendez-vous fixes, et la constitution d'un audimat. Le spectateur devient une audience, vendue aux annonceurs.</p>
 <p>Un film en salle est un événement singulier ; un film à la télévision devient une case dans une grille, entre deux écrans publicitaires.</p>
-<h3>Stiegler et les industries de programmes</h3>
-<p>Pour Bernard Stiegler, un film, une émission, un morceau de musique sont des <b>objets temporels</b> : ils s'écoulent dans le temps, et la conscience qui les suit épouse leur écoulement. Regarder un film, c'est prêter son propre temps au temps du film.</p>
+
+<p><b class="lead-in">Stiegler et les industries de programmes.</b> Pour Bernard Stiegler, un film, une émission, un morceau de musique sont des <b>objets temporels</b> : ils s'écoulent dans le temps, et la conscience qui les suit épouse leur écoulement. Regarder un film, c'est prêter son propre temps au temps du film.</p>
 <p>Quand ces objets sont produits industriellement, par des <b>industries de programmes</b>, c'est donc le temps même des consciences qui devient une matière première. Dans le troisième tome de <em>La Technique et le Temps</em>, intitulé <em>Le Temps du cinéma</em> (2001), il montre comment ces industries en viennent à organiser ce qui nous constitue comme conscience.</p>
-<h3>Synchroniser les consciences</h3>
-<p>Le danger, selon Stiegler, c'est la <b>synchronisation</b> : des millions de consciences qui regardent la même chose, au même moment, finissent par avoir les mêmes souvenirs, les mêmes désirs, le même « on ». Il parle de misère symbolique : chacun perd la capacité de produire ses propres symboles.</p>
+
+<p><b class="lead-in">Synchroniser les consciences.</b> Le danger, selon Stiegler, c'est la <b>synchronisation</b> : des millions de consciences qui regardent la même chose, au même moment, finissent par avoir les mêmes souvenirs, les mêmes désirs, le même « on ». Il parle de misère symbolique : chacun perd la capacité de produire ses propres symboles.</p>
 <p>Or c'est exactement l'histoire que raconte Joël Augros. Les chaînes locales de Berlusconi deviennent nationales en se <b>synchronisant</b> : les mêmes cassettes, diffusées à la même heure par des dizaines d'émetteurs. La synchronisation des consciences n'est pas ici une métaphore : c'est une stratégie industrielle, presque artisanale.</p>
 <blockquote class="pull">Synchroniser les émetteurs, synchroniser les consciences.</blockquote>
 <h3>Du temps de cerveau disponible</h3>
 <p>En 2004, le patron de TF1, Patrick Le Lay, résume le modèle avec une franchise involontaire : ce que la chaîne vend aux annonceurs, c'est « du temps de cerveau humain disponible ». Les programmes ne sont plus le produit ; le produit, c'est le spectateur, livré aux publicitaires entre deux émissions.</p>
 <p>Stiegler fera de la formule le symptôme de ce qu'il appelle la <b>télécratie</b>, ou populisme industriel : un pouvoir qui ne passe plus par la loi ou l'argument, mais par la captation de l'attention et des pulsions. Il publie <em>La Télécratie contre la démocratie</em> en 2006, sous forme de lettre ouverte aux candidats à l'élection présidentielle française.</p>
-<h3>Berlusconi, figure de la télécratie</h3>
-<p>Berlusconi en est, à mes yeux, la figure accomplie. Promoteur immobilier devenu marchand de programmes, il construit un empire en vendant du temps de cerveau aux annonceurs, puis convertit cette audience en électorat : en 1994, il entre en politique et gagne les élections. L'homme qui synchronisait les émetteurs gouverne le pays.</p>
+
+<p><b class="lead-in">Berlusconi, figure de la télécratie.</b> Berlusconi en est, à mes yeux, la figure accomplie. Promoteur immobilier devenu marchand de programmes, il construit un empire en vendant du temps de cerveau aux annonceurs, puis convertit cette audience en électorat : en 1994, il entre en politique et gagne les élections. L'homme qui synchronisait les émetteurs gouverne le pays.</p>
 <p>Mais Stiegler empêche aussi une lecture trop simple. Pour lui, toute technique est un <b>pharmakon</b>, à la fois poison et remède. Le cinéma est lui aussi un objet temporel industriel. Ce n'est pas le support qui sauve ou qui damne, c'est l'usage qu'on en fait.</p>
 <p class="aside">Ce que Bellocchio montrera : le cinéma peut aussi être un remède, une mémoire qui fait penser.</p>
-<h3>Publicité, couleur, radio</h3>
-<p>De même arrive la publicité. Elle était apparue dès 1957 dans <em>Carosello</em>, ce rendez-vous du soir de la RAI qui glissait des réclames dans de petits sketches, entre les programmes pour enfants : <em>La Linea</em> de Cavandoli, le poussin <em>Calimero</em>. « Après Carosello, au lit », disaient les parents. <em>Carosello</em> s'arrête en 1977, et la publicité envahit tout.</p>
+
+<p><b class="lead-in">Publicité, couleur, radio.</b> De même arrive la publicité. Elle était apparue dès 1957 dans <em>Carosello</em>, ce rendez-vous du soir de la RAI qui glissait des réclames dans de petits sketches, entre les programmes pour enfants : <em>La Linea</em> de Cavandoli, le poussin <em>Calimero</em>. « Après Carosello, au lit », disaient les parents. <em>Carosello</em> s'arrête en 1977, et la publicité envahit tout.</p>
 <p>La télévision couleur arrive en 1977 (très tard), en même temps que la télé privée : un effet de synchronie accaparante.</p>
 <p>La radio connaît la même effervescence, avec les radios libres, vécue comme une libération politique face à une RAI démocrate-chrétienne trop morale.</p>
 <h3>Les années de plomb en toile de fond</h3>
 <p>Avant-dernier extrait : <em>Le Clan des pourris</em> (Umberto Lenzi, 1976), avec Tomas Milian. Un film policier à l'italienne, un peu comique : un « poliziottesco », le filon du polar violent des années 70.</p>
 <p>Le générique est une trouvaille : on voit d'abord un western, puis la caméra se détache du film projeté, et l'on découvre le genre policier. Un filon chasse l'autre, sous nos yeux.</p>
 <p>Les années de plomb arrivent ainsi comme décor dans le cinéma, presque par inadvertance : enlèvements, attentats, rues dangereuses.</p>
-<figure class="poster"><img src="img/trucido.jpg" alt="Jaquette de Il trucido e lo sbirro" loading="lazy"><figcaption>Il trucido e lo sbirro, titre italien du Clan des pourris (Umberto Lenzi, 1976), avec Tomas Milian. Jaquette DVD.</figcaption></figure>
-<h3>C'est quoi, les années de plomb ?</h3>
-<p>Une série d'attentats terroristes de l'extrême droite, à partir de la bombe de la piazza Fontana à Milan en 1969, puis la radicalisation de l'extrême gauche, Brigades rouges en tête. Une décennie de violence qui culmine avec l'affaire Moro, en 1978, et l'attentat de la gare de Bologne, en 1980.</p>
+<figure class="poster"><img alt="Jaquette de Il trucido e lo sbirro" loading="lazy" src="img/trucido.jpg"/><figcaption>Il trucido e lo sbirro, titre italien du Clan des pourris (Umberto Lenzi, 1976), avec Tomas Milian. Jaquette DVD.</figcaption></figure>
+
+<p><b class="lead-in">C'est quoi, les années de plomb ?.</b> Une série d'attentats terroristes de l'extrême droite, à partir de la bombe de la piazza Fontana à Milan en 1969, puis la radicalisation de l'extrême gauche, Brigades rouges en tête. Une décennie de violence qui culmine avec l'affaire Moro, en 1978, et l'attentat de la gare de Bologne, en 1980.</p>
 <p>Et cela au moment même où la télévision arrive, qui donne un tour rassurant au domicile. Dehors, la peur ; dedans, la télé. Le spectateur reste chez lui.</p>
 <p class="aside">La troisième partie reprendra ce contexte en détail.</p>
-<h3>Des salles vieillissantes</h3>
-<p>Par ailleurs, les salles sont vieillissantes. Elles sont détenues par des réseaux régionaux qui ne sont pas assez puissants pour les rénover, et tout au plus pour les découper en plusieurs petites salles. Beaucoup ferment, y compris les salles paroissiales.</p>
+
+<p><b class="lead-in">Des salles vieillissantes.</b> Par ailleurs, les salles sont vieillissantes. Elles sont détenues par des réseaux régionaux qui ne sont pas assez puissants pour les rénover, et tout au plus pour les découper en plusieurs petites salles. Beaucoup ferment, y compris les salles paroissiales.</p>
 <p>Les journaux populaires consacrés au cinéma disparaissent ; ne resteront que les publications cinéphiles. Tout cela entraîne une modification du public : ce sont les salles les plus populaires qui ferment le plus, et les salles de première vision voient leurs prix augmenter. Le cinéma devient un loisir de centre-ville, plus cher, plus cultivé.</p>
 <p>Vieillissement des salles, mais aussi des acteurs, sans relève. Y compris pour les producteurs, d'ailleurs.</p>
 <h3>La modernité à l'italienne</h3>
 <p>Les salles se vident aussi parce que la vie sort ailleurs. Tout cela est pris dans la modernité à l'italienne. Cette modernité, c'est aussi la mobilité : la Fiat 500. L'automobile est un autre élément qui explique la baisse de la fréquentation : le dimanche, on part à la mer plutôt qu'au cinéma du quartier.</p>
 <p>De même les boîtes de nuit. « Ça paraît un peu idiot », mais elles vont capter un public jeune par leur modernité, en contraste avec les cinémas. Elles concurrencent la sortie de groupe, la sortie sociale et de séduction. Ne serait-ce que parce qu'elles ont l'air conditionné : avantage majeur, surtout en été.</p>
 <p>Et pendant ce temps, les filons se sont taris.</p>
-<h3>Ginger et Fred</h3>
-<p>Pour clore la matinée, Fellini filme ce qui a pris la place du cinéma. Dernier extrait : <em>Ginger et Fred</em> (Federico Fellini, 1985). Giulietta Masina et Marcello Mastroianni y jouent deux vieux danseurs de claquettes, imitateurs de Fred Astaire et Ginger Rogers, invités dans une émission de variétés de Noël.</p>
+
+<p><b class="lead-in">Ginger et Fred.</b> Pour clore la matinée, Fellini filme ce qui a pris la place du cinéma. Dernier extrait : <em>Ginger et Fred</em> (Federico Fellini, 1985). Giulietta Masina et Marcello Mastroianni y jouent deux vieux danseurs de claquettes, imitateurs de Fred Astaire et Ginger Rogers, invités dans une émission de variétés de Noël.</p>
 <p>Autour d'eux, la télévision privée dans toute sa splendeur : sosies, monstres de foire, publicités. Une mise en abyme de l'addiction à la télé dont l'Italie a été prise, filmée par le plus grand cinéaste du pays, à la fin de sa carrière.</p>
-<figure class="poster"><img src="img/ginger-e-fred.jpg" alt="Couverture de Ginger e Fred" loading="lazy"><figcaption>Ginger e Fred (Federico Fellini, 1985), couverture du livre du scénario chez Longanesi.</figcaption></figure>
-<h3>Un faisceau de pistes</h3>
-<p>Autant rester chez soi, ou faire autre chose. La baisse de l'appétit cinématographique s'explique ainsi : pas juste la télé, mais un faisceau d'indices, de pistes. Une explication <b>multifactorielle</b>, attentive à la granularité des phénomènes : télévision privée, salles vieillissantes, voiture, boîtes de nuit, filons taris.</p>
+<figure class="poster"><img alt="Couverture de Ginger e Fred" loading="lazy" src="img/ginger-e-fred.jpg"/><figcaption>Ginger e Fred (Federico Fellini, 1985), couverture du livre du scénario chez Longanesi.</figcaption></figure>
+
+<p><b class="lead-in">Un faisceau de pistes.</b> Autant rester chez soi, ou faire autre chose. La baisse de l'appétit cinématographique s'explique ainsi : pas juste la télé, mais un faisceau d'indices, de pistes. Une explication <b>multifactorielle</b>, attentive à la granularité des phénomènes : télévision privée, salles vieillissantes, voiture, boîtes de nuit, filons taris.</p>
 <p>Mon soupçon, pour finir : derrière cette prudence, un <b>empirisme dépolitisant</b>. À force de multiplier les causes, on perd de vue ce que Berlusconi, la Démocratie chrétienne et la culture de programme ont fait, politiquement, au cinéma italien.</p>
 <p class="aside">L'après-midi, Aurore Renaut reprend le fil à sa source : l'après-guerre et la naissance du néoréalisme.</p>
 </section>
-<header class="part" id="partie-2"><div class="part-in"><div class="tricolore"><i></i><i></i><i></i></div><p class="part-kicker">Deuxième partie</p><h2 class="part-title">L'après-guerre <br><em>L'arte di arrangiarsi</em></h2><p class="part-sub">Le cinéma italien de 1945 aux années 60, ou l'art de se débrouiller</p><p class="part-credit">Intervention d'Aurore Renaut (Université de Lorraine)<br/>Jeudi 19 novembre 2026, après-midi</p></div></header>
+<header class="part" id="partie-2"><div class="part-in"><div class="tricolore"><i></i><i></i><i></i></div><p class="part-kicker">Deuxième partie</p><h2 class="part-title">L'après-guerre <br/><em>L'arte di arrangiarsi</em></h2><p class="part-sub">Le cinéma italien de 1945 aux années 60, ou l'art de se débrouiller</p><p class="part-credit">Intervention d'Aurore Renaut (Université de Lorraine)<br/>Jeudi 19 novembre 2026, après-midi</p></div></header>
 <section class="chapter">
 <h3>L'art de se débrouiller</h3>
 <p>Juste à la fin de la Seconde Guerre mondiale, alors que le pays est dévasté humainement, politiquement et économiquement, le cinéma italien va connaître le plus grand âge d'or de son histoire. Les films néoréalistes compteront parmi les œuvres les plus matricielles pour des générations de cinéastes du monde entier.</p>
@@ -396,8 +394,8 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <h3>Un courant mondial</h3>
 <p>La fin de la guerre fera naître le néoréalisme. <em>Rome, ville ouverte</em> va lancer ce courant, qui sera majeur pour le cinéma, y compris à l'international : il inspirera le cinéma indépendant américain, Cassavetes en tête, et jusqu'au Japon. La Nouvelle Vague française s'en réclamera aussi.</p>
 <p>Ce que le néoréalisme invente : tourner dans la rue plutôt qu'en studio, avec des non-professionnels à côté des acteurs, sur des sujets contemporains, à hauteur d'homme. Une manière de filmer qui deviendra une manière de voir.</p>
-<h3>1943, l'Italie coupée en deux</h3>
-<p>En juillet 1943, Mussolini est renversé. Le maréchal Badoglio, qui le remplace, signe en septembre un armistice séparé avec les Alliés. Hitler envahit alors l'Italie : le Nord passe sous occupation allemande, avec une république fantoche de Mussolini, tandis que les Alliés remontent par le Sud.</p>
+
+<p><b class="lead-in">1943, l'Italie coupée en deux.</b> En juillet 1943, Mussolini est renversé. Le maréchal Badoglio, qui le remplace, signe en septembre un armistice séparé avec les Alliés. Hitler envahit alors l'Italie : le Nord passe sous occupation allemande, avec une république fantoche de Mussolini, tandis que les Alliés remontent par le Sud.</p>
 <p>Rome est déclarée <b>ville ouverte</b> : une ville qui renonce à se défendre pour éviter d'être détruite, avec l'appui du pape. Elle reste occupée par les Allemands jusqu'en juin 1944.</p>
 <p>Et c'est assez incroyable que les Italiens trouvent à faire du cinéma dans ces entrefaites, où tout le monde crève de faim.</p>
 </section>
@@ -408,33 +406,32 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <p>Cinecittà sert de camp de réfugiés jusque dans les années 50. On tourne donc ailleurs : dans les appartements, les cages d'escalier, les rues. Et avec des morceaux de pellicule achetés au marché noir, de qualité inégale, ce qui donne au film son grain si particulier.</p>
 <p>Et pour les acteurs ? Beaucoup sont compromis avec le fascisme. On a alors recours aux acteurs de cabaret et de comédie, à qui l'on va donner leur chance dans la tragédie. Aldo Fabrizi, comique du music-hall, joue le prêtre ; Anna Magnani, chanteuse de revue, joue Pina.</p>
 <p>C'est là toute l'arte di arrangiarsi : la contrainte économique devient une esthétique.</p>
-<h3>Catholiques et communistes</h3>
-<p><em>Rome, ville ouverte</em> est considéré comme le film qui a changé la cinéphilie, en particulier par certains de ses plans. On y voit Rome occupée par l'Allemagne, et des communistes et des catholiques s'allier contre l'occupant dans un même mouvement de résistance.</p>
+
+<p><b class="lead-in">Catholiques et communistes.</b> <em>Rome, ville ouverte</em> est considéré comme le film qui a changé la cinéphilie, en particulier par certains de ses plans. On y voit Rome occupée par l'Allemagne, et des communistes et des catholiques s'allier contre l'occupant dans un même mouvement de résistance.</p>
 <p>Le prêtre et l'ingénieur communiste meurent pour la même cause. Ce récit d'union nationale est aussi un récit politique : il prépare l'Italie d'après-guerre, où démocrates-chrétiens et communistes gouverneront d'abord ensemble. D'où, aussi, le succès du parti démocrate-chrétien.</p>
-<h3>La mort de Pina</h3>
-<p>Anna Magnani joue Pina, une veuve qui attend un enfant d'un compagnon communiste qu'elle doit épouser le lendemain, solidaire des autres résistants catholiques. Les Allemands l'arrêtent ; elle court derrière le camion, crie son nom, et une rafale l'abat.</p>
+
+<p><b class="lead-in">La mort de Pina.</b> Anna Magnani joue Pina, une veuve qui attend un enfant d'un compagnon communiste qu'elle doit épouser le lendemain, solidaire des autres résistants catholiques. Les Allemands l'arrêtent ; elle court derrière le camion, crie son nom, et une rafale l'abat.</p>
 <p>Le plan, c'est sa mort, dans sa manière de repousser l'Allemand. Le plan est terrible, et c'est moins un plan qu'une scène. Il n'y a que la rafale pour arrêter le volcan. À la Tarantino, l'image qui sauve ? En tout cas, rien ne la sauve, elle.</p>
 <h3>Une piétà avec ses bas</h3>
 <p>On est loin de l'actrice blonde platine des téléphones blancs. Une brune éruptive vient jouer son peuple, au point d'en être une part.</p>
 <p>La scène est rejouée sur le mode de la piétà : le prêtre recueille le corps, l'enfant pleure sa mère. Mais c'est une piétà avec ses bas, la jupe relevée sur la cuisse dans la chute. Une piétà scandaleusement érotique. Tragiquement érotique.</p>
 <blockquote class="pull">Il n'y a que la rafale pour arrêter le volcan.</blockquote>
-<h3>Les enfants nous regardent</h3>
-<p>L'enfance est un grand thème du néoréalisme. <em>Les enfants nous regardent</em>, c'est d'ailleurs le titre d'un film de De Sica de 1943. Dans <em>Rome, ville ouverte</em>, ce sont les enfants qui reprennent la lutte et assistent, à la fin, à l'exécution du prêtre. Comme une tentative d'en faire des témoins moraux, la génération qui devra se souvenir.</p>
+
+<p><b class="lead-in">Les enfants nous regardent.</b> L'enfance est un grand thème du néoréalisme. <em>Les enfants nous regardent</em>, c'est d'ailleurs le titre d'un film de De Sica de 1943. Dans <em>Rome, ville ouverte</em>, ce sont les enfants qui reprennent la lutte et assistent, à la fin, à l'exécution du prêtre. Comme une tentative d'en faire des témoins moraux, la génération qui devra se souvenir.</p>
 <p><em>Allemagne année zéro</em> (Rossellini, 1948) serait-il une réponse à <em>Rome, ville ouverte</em> ? Cette fois dans Berlin en ruines, avec un enfant qui n'est plus innocent : Edmund empoisonne son père et finit par se jeter dans le vide.</p>
-<h3>Deuxième extrait : Celluloïd</h3>
-<p><em>Celluloïd</em> (Carlo Lizzani, 1996) raconte le tournage de <em>Rome, ville ouverte</em>, avec ses bricolages, ses manques d'argent et ses passions. Il nous montre Rossellini pris dans un dilemme en salle de montage, avec tout son artisanat : la mort de Pina n'existe qu'en une seule prise, qu'il faut rallonger tout en gardant sa force volcanique.</p>
+
+<p><b class="lead-in">Deuxième extrait : Celluloïd.</b> <em>Celluloïd</em> (Carlo Lizzani, 1996) raconte le tournage de <em>Rome, ville ouverte</em>, avec ses bricolages, ses manques d'argent et ses passions. Il nous montre Rossellini pris dans un dilemme en salle de montage, avec tout son artisanat : la mort de Pina n'existe qu'en une seule prise, qu'il faut rallonger tout en gardant sa force volcanique.</p>
 <p>Par ailleurs, Rossellini aura une liaison orageuse avec Anna Magnani, avant de la quitter pour Ingrid Bergman, qui lui avait écrit après avoir vu ses films. Magnani tournera <em>Vulcano</em> en même temps que Bergman tourne <em>Stromboli</em> : la guerre des volcans.</p>
 <h3>Une profession de foi</h3>
 <p>La profession de foi du néoréalisme : regarder sans mystifier. Explorer les faits historiques, mais aussi les comportements qui les accompagnent. Expérimenter librement.</p>
 <p>La question du style est alors résolue d'elle-même : ce sont des raisons économiques, structurelles et politiques qui dictent le film. On tourne dehors parce que les studios sont occupés ; on filme des inconnus parce que les acteurs manquent ; on raconte la guerre parce qu'elle vient d'avoir lieu.</p>
 <p>Le néoréalisme court de 1945 à 1953. Pas si long, donc : c'est un moment politique plus qu'une école.</p>
-<h3>Vittorio De Sica</h3>
-<p>Vittorio De Sica est l'autre grand auteur du néoréalisme. Il s'appuie sur l'expérience de la guerre : planter la caméra dans la vie réelle, nous dire la vérité et chercher le salut. Avec Cesare Zavattini au scénario, il signe <em>Sciuscià</em>, <em>Le Voleur de bicyclette</em> (1948), <em>Umberto D.</em></p>
+
+<p><b class="lead-in">Vittorio De Sica.</b> Vittorio De Sica est l'autre grand auteur du néoréalisme. Il s'appuie sur l'expérience de la guerre : planter la caméra dans la vie réelle, nous dire la vérité et chercher le salut. Avec Cesare Zavattini au scénario, il signe <em>Sciuscià</em>, <em>Le Voleur de bicyclette</em> (1948), <em>Umberto D.</em></p>
 <p>Avant cela, il était acteur de films de dandy, ceux des téléphones blancs, mais pas fasciste. Reste qu'il a travaillé sous le fascisme, et que Mussolini, grand spectateur, l'agaçait. D'où peut-être la culpabilité qui traverse son texte.</p>
-<h3>« Enfin, nous avons un film italien »</h3>
-<p><em>Rome, ville ouverte</em> est un film réconciliateur pour les Italiens. Et à l'étranger ? Le président du Conseil d'après-guerre témoigne combien il a rendu les autres pays compréhensifs envers l'Italie, ancienne alliée de Hitler : une carte de visite pour ne pas être sanctionné lors des traités de paix.</p>
+
+<p><b class="lead-in">« Enfin, nous avons un film italien ».</b> <em>Rome, ville ouverte</em> est un film réconciliateur pour les Italiens. Et à l'étranger ? Le président du Conseil d'après-guerre témoigne combien il a rendu les autres pays compréhensifs envers l'Italie, ancienne alliée de Hitler : une carte de visite pour ne pas être sanctionné lors des traités de paix.</p>
 <p>Projeté à Cannes en 1946 sans trop de bruit, il y remporte pourtant le Grand Prix. C'est après qu'il crée des remous dans les salles. Salves d'applaudissements : « Enfin, nous avons un film italien. » Immense succès : 10 millions d'Italiens en moins d'un an, un cinquième du pays.</p>
-<figure class="poster"><img src="img/rome-ville-ouverte.jpg" alt="Affiche de Rome, ville ouverte" loading="lazy"><figcaption>Rome, ville ouverte : « Un film de Roberto Rossellini, avec Aldo Fabrizi, Anna Magnani, Marcello Pagliero ».</figcaption></figure>
 <p>Il rend possible un cinéma moins formaté, moins cher, plus libre, permis par un certain vide institutionnel.</p>
 </section>
 <section class="chapter" id="chapitre-07"><p class="ch-num">Chapitre 07</p><h2>La fin du néoréalisme</h2>
@@ -442,26 +439,26 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <blockquote class="pull">Moins de guenilles, plus de jambes.</blockquote>
 <h3>Une disparition organisée</h3>
 <p>D'où la disparition progressive du néoréalisme, poussée par les institutions. Et peut-être aussi une lassitude des Italiens devant la misère : après la guerre, on veut rêver, pas revoir ses ruines à l'écran.</p>
-<p>La droite modérée, la Démocratie chrétienne, pousse pour des films plus divertissants. Sur ces entrefaites, Andreotti fait voter la loi de 1949, qui rend la production dépendante des aides publiques. Les primes étant calculées sur les recettes, les films inoffensifs et populaires font leur retour.</p>
+<p>La droite modérée, la Démocratie chrétienne, pousse pour des films plus divertissants. On a vu au chapitre 2 comment sa loi de 1949, en calculant les aides sur les recettes, favorise les films inoffensifs et populaires.</p>
 <p class="aside">Des aides en fonction des ventes, et donc, par voie de conséquence, le divertissement ? Je n'étais pas sûr de cet embranchement. Il se vérifie : les primes récompensent ce qui marche, et ce qui marche, c'est l'évasion.</p>
 <h3>Jeunesse perdue (Pietro Germi, 1947)</h3>
 <p>Un film noir tourné à Rome, dans l'université romaine. Pas un drame social : Germi est un cinéaste du genre. Il y raconte un jeune bourgeois, étudiant, qui ne supporte plus les privations d'après-guerre et devient chef d'une bande de voleurs.</p>
 <p>Le film a d'abord été bloqué, sans visa d'exploitation, accusé d'être une école du crime, dans les mœurs très brûlantes de l'Italie d'après-guerre. Le scandale, c'est que la bourgeoisie fait de la délinquance. Ni la faim ni la pauvreté, mais le désir d'argent : il vole pour le superflu.</p>
-<h3>Le réalisme contre le genre</h3>
-<p>S'ensuivra un néoréalisme rose, comme si le genre venait se mêler au néoréalisme et l'adoucir. Cela donnera les <em>Don Camillo</em>, coproductions franco-italiennes avec Fernandel, où le curé et le maire communiste se chamaillent dans un village de la plaine du Pô : la guerre froide en comédie.</p>
+
+<p><b class="lead-in">Le réalisme contre le genre.</b> S'ensuivra un néoréalisme rose, comme si le genre venait se mêler au néoréalisme et l'adoucir. Cela donnera les <em>Don Camillo</em>, coproductions franco-italiennes avec Fernandel, où le curé et le maire communiste se chamaillent dans un village de la plaine du Pô : la guerre froide en comédie.</p>
 <p>Désormais, quiconque veut produire un film évolue en terrain miné. La deuxième fois, il passera par le divertissement, donc par le genre. <em>Pain, amour et fantaisie</em> est permis à partir du moment où c'est une comédie : on peut montrer la misère, pourvu qu'on en rie.</p>
 <p>Et le genre n'est pas si différent du filon, donc.</p>
-<h3>Un contre-discours</h3>
-<p>Ça m'intéresse, ce trope : le réalisme contre le genre. Mais il y a un contre-discours possible : le divertissement comme manière d'aborder malgré tout les choses. La comédie dit la misère autrement, et parfois mieux, parce qu'elle passe la censure et touche le grand public.</p>
+
+<p><b class="lead-in">Un contre-discours.</b> Ça m'intéresse, ce trope : le réalisme contre le genre. Mais il y a un contre-discours possible : le divertissement comme manière d'aborder malgré tout les choses. La comédie dit la misère autrement, et parfois mieux, parce qu'elle passe la censure et touche le grand public.</p>
 <p>On retombe sur le vieux débat entre structuralisme et cultural studies : la culture de masse aliène-t-elle, ou les spectateurs s'en emparent-ils à leur manière ? Avec, au milieu, le critique, à la française, en juge sur pièce de ce qui l'emporte, film par film.</p>
 <h3>À bas la misère (Gennaro Righelli, 1945)</h3>
 <p>On y voit encore les thèmes du néoréalisme, la faim, le marché noir, la débrouille, mais irrigués par le genre, en l'occurrence le comique. Magnani elle-même passe du drame à la comédie tout en restant irradiante. Elle retrouve son talent premier, celui de la chanson et de la revue.</p>
 <p>En 1951, dans <em>Bellissima</em>, elle tournera avec Visconti, futur auteur du <em>Guépard</em>. Elle y joue une mère prête à tout pour faire engager sa petite fille à Cinecittà : le cinéma qui se regarde rêver. Seule actrice que Visconti laissera improviser. Une exception parmi les autres plantureuses, issues des concours de beauté, comme Sophia Loren ou Gina Lollobrigida.</p>
-<h3>Le Pigeon, deux extraits</h3>
-<p>On retrouve <em>Le Pigeon</em> (Mario Monicelli, 1958), déjà vu le matin. Une parodie de film noir, à la manière du <em>Rififi</em>, traitée de manière burlesque : une radiographie de la société italienne à la fin des années 50, celle des chômeurs et des petits voleurs que le miracle économique a oubliés.</p>
+
+<p><b class="lead-in">Le Pigeon, deux extraits.</b> On retrouve <em>Le Pigeon</em> (Mario Monicelli, 1958), vu le matin (chapitre 3). Une parodie de film noir, à la manière du <em>Rififi</em>, traitée de manière burlesque : une radiographie de la société italienne à la fin des années 50, celle des chômeurs et des petits voleurs que le miracle économique a oubliés.</p>
 <p>Il signe la naissance de la nouvelle comédie italienne, une <b>comédie du désespoir</b>, qui renvoie à la fois à la commedia dell'arte, ses masques et ses lazzi, et au néoréalisme, ses faubourgs et sa misère.</p>
-<h3>Beau comme un dieu</h3>
-<p>C'est aussi l'acte de naissance d'acteurs. Vittorio Gassman, jusque-là cantonné aux rôles de méchant, découvre son génie comique. Et Marcello Mastroianni, beau comme un dieu, futur héros de <em>La Dolce Vita</em>, deux ans plus tard.</p>
+
+<p><b class="lead-in">Beau comme un dieu.</b> C'est aussi l'acte de naissance d'acteurs. Vittorio Gassman, jusque-là cantonné aux rôles de méchant, découvre son génie comique. Et Marcello Mastroianni, beau comme un dieu, futur héros de <em>La Dolce Vita</em>, deux ans plus tard.</p>
 <p>Les rêves décrits sont ceux de crève-la-faim : le casse du siècle se termine autour d'un plat de pâtes et de pois chiches, mangé dans la cuisine qu'on voulait traverser pour atteindre le coffre.</p>
 <blockquote class="pull">Le casse du siècle finit en plat de pâtes.</blockquote>
 </section>
@@ -478,22 +475,21 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <h3>Rocco et ses frères (Luchino Visconti, 1960)</h3>
 <p>Arrive <em>Rocco et ses frères</em>, qui reprend symboliquement le trajet, non plus vers la France mais vers Milan. Une mère lucanienne et ses cinq fils débarquent à la gare centrale, un soir d'hiver, avec leurs valises.</p>
 <p>Visconti filme ici sa ville, Milan, avec Alain Delon dans le rôle de Rocco, Annie Girardot et Renato Salvatori : une coproduction franco-italienne. Le film donne envie d'être vu, plein d'enthousiasme en ses débuts, avant la tragédie. Contraste entre ces méridionaux et le Milan industriel.</p>
-<h3>Une enquête</h3>
-<p>Pour concevoir le film, Visconti s'appuie sur les récits de Giovanni Testori, mais surtout sur une enquête journalistique. On y découvre que les méridionaux arrivent par centaines, très régulièrement, avant de rejoindre des soupentes, tels des sous-hommes. Ils sont souvent comparés à des animaux par les Milanais.</p>
+
+<p><b class="lead-in">Une enquête.</b> Pour concevoir le film, Visconti s'appuie sur les récits de Giovanni Testori, mais surtout sur une enquête journalistique. On y découvre que les méridionaux arrivent par centaines, très régulièrement, avant de rejoindre des soupentes, tels des sous-hommes. Ils sont souvent comparés à des animaux par les Milanais.</p>
 <p>La boxe y est un lieu d'émancipation pécuniaire pour beaucoup d'immigrés. La prostitution aussi, d'hommes et de femmes. D'où la censure : pour le viol, et pour l'homosexualité évoquée en filigrane.</p>
 <h3>Troisième extrait : Paisà (Rossellini, 1946)</h3>
 <p>Un film fait le chemin inverse des émigrés, du Sud vers le Nord, pour recoudre le pays. <em>Paisà</em> raconte, en six épisodes, la remontée de l'armée américaine, de la Sicile à la plaine du Pô. Pour Rossellini, il s'agit de montrer l'Italie aux Italiens, avec un didactisme technique et géographique : une carte, une voix off, des dialectes.</p>
 <p>Le film est plus âpre, plus rude : la volonté d'être plus ancré encore que <em>Rome, ville ouverte</em>. L'attente de la mort. « Dans ma famille, personne ne saura ce qui m'est arrivé » : l'histoire des vaincus racontée par le cinéma. Encore une fois, c'est un peu tarantinien, par son goût de la réparation.</p>
-<h3>Le couperet</h3>
-<p>Le couperet de la fin du film : dans le delta du Pô, des partisans italiens et des soldats alliés sont capturés par les Allemands. On jette des corps à l'eau. Alliés et résistants meurent ensemble.</p>
+
+<p><b class="lead-in">Le couperet.</b> Le couperet de la fin du film : dans le delta du Pô, des partisans italiens et des soldats alliés sont capturés par les Allemands. On jette des corps à l'eau. Alliés et résistants meurent ensemble.</p>
 <p>Anti-gros plan, anti-dramaturgie : on ne joue pas sur l'émotion. Rossellini décide de respecter les conditions de production, la lumière grise, les marais, les visages anonymes. Réalisation rude, style rude.</p>
-<blockquote class="pull">Réalisation rude, style rude.</blockquote>
 <p class="aside">Retenir cette scène : elle reviendra dans Buongiorno, notte.</p>
 <h3>Quatrième extrait : Le Cri (Michelangelo Antonioni, 1957)</h3>
 <p>Le Nord n'est pas la terre promise. Un mélodrame masculin, par un réalisateur bourgeois de Ferrare qui s'essaie au néoréalisme. Un drame dans le Nord, lui aussi, dans les brumes de la vallée du Pô. Un ouvrier se fait quitter par sa compagne : il part sur les routes avec sa fille, en errance de femme en femme, puis la rend à sa mère.</p>
 <p>On y trouve déjà le cinéma à venir d'Antonioni, celui de <em>L'Avventura</em> (1960) : un film qui ne raconte rien, quête ou perte du sujet, incommunicabilité.</p>
-<h3>Crise de la représentation</h3>
-<p>Dans <em>L'Avventura</em>, des bourgeois en yacht vont d'île en île, et l'actrice principale disparaît au bout de trente minutes. On ne la retrouvera jamais, et le film semble perdu avec elle : des personnages en quête d'auteur.</p>
+
+<p><b class="lead-in">Crise de la représentation.</b> Dans <em>L'Avventura</em>, des bourgeois en yacht vont d'île en île, et l'actrice principale disparaît au bout de trente minutes. On ne la retrouvera jamais, et le film semble perdu avec elle : des personnages en quête d'auteur.</p>
 <p>Se défendre de la narration : Antonioni fait le lien avec la guerre. Les limites de la barbarie font crise de la représentation, et donc du sujet. Après les camps, on ne peut plus raconter comme avant. Et c'est déjà là, dans <em>Le Cri</em>.</p>
 </section>
 <section class="chapter" id="chapitre-09"><p class="ch-num">Chapitre 09</p><h2>Naples, deux fois</h2>
@@ -504,18 +500,18 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <h3>Main basse sur la ville (Francesco Rosi, 1963)</h3>
 <p>Un promoteur immobilier, joué par Rod Steiger, et conseiller municipal, fait main basse sur Naples en bâtissant sans contrôle. Le film s'ouvre sur un immeuble qui s'effondre et tue des habitants. Lion d'or à Venise.</p>
 <p>La fascination du cinéma pour le réel : le plâtre qui tombe, dans la vraie ville de Naples, pas en studio. Le film rejoue, avant l'heure, les effondrements de Marseille. Et de nouveau, la fascination pour l'enfance, comme témoin moral après le fascisme.</p>
-<h3>1960, l'année charnière</h3>
-<p>L'année 1960 voit sortir <em>La Dolce Vita</em> et <em>Rocco et ses frères</em>. Deux récits d'immigration : l'une paysanne, vers Milan ; l'autre petite-bourgeoise, celle d'un journaliste de province venu à Rome. La bourgeoisie, en tant que classe, prend la place des paysans à l'écran. Il faudra attendre longtemps avant de revoir le monde paysan, avec <em>L'Arbre aux sabots</em> d'Olmi, en 1978.</p>
+
+<p><b class="lead-in">1960, l'année charnière.</b> L'année 1960 voit sortir <em>La Dolce Vita</em> et <em>Rocco et ses frères</em>. Deux récits d'immigration : l'une paysanne, vers Milan ; l'autre petite-bourgeoise, celle d'un journaliste de province venu à Rome. La bourgeoisie, en tant que classe, prend la place des paysans à l'écran. Il faudra attendre longtemps avant de revoir le monde paysan, avec <em>L'Arbre aux sabots</em> d'Olmi, en 1978.</p>
 <p>Contrairement à la Nouvelle Vague française, c'est un mouvement collectif, parce que de gauche, en fait : on partage les scénaristes, les techniciens, les convictions. Même si les scénarios l'infirment parfois.</p>
-<h3>La source vive</h3>
-<p>Le néoréalisme est la source vive du cinéma italien. Le genre et les filons vont l'interpréter, avant de le dissoudre, par la télévision et les programmes.</p>
+
+<p><b class="lead-in">La source vive.</b> Le néoréalisme est la source vive du cinéma italien. Le genre et les filons vont l'interpréter, avant de le dissoudre, par la télévision et les programmes.</p>
 <blockquote class="pull">Les belles jambes ont eu raison des guenilles.</blockquote>
 <p>Reste l'héritage du néoréalisme pour informer cette mélancolie : la Nouvelle Vague, Cassavetes, et bien d'autres encore.</p>
 <p class="aside">Et donc, la Gradiva. Le lendemain, Bellocchio montrera ce que devient cette source quand le cinéma s'en souvient.</p>
 </section>
-<header class="part" id="partie-3"><div class="part-in"><div class="tricolore"><i></i><i></i><i></i></div><p class="part-kicker">Troisième partie · Gros plan</p><h2 class="part-title">Buongiorno, <br><em>notte</em></h2><p class="part-sub">Marco Bellocchio, 2003 : l'affaire Moro, ou le cinéma comme conscience de l'Italie</p><p class="part-credit">Projection présentée par Chloé Guerber, suivie d'un temps d'échange<br/>Vendredi 20 novembre 2026, matin</p></div></header>
+<header class="part" id="partie-3"><div class="part-in"><div class="tricolore"><i></i><i></i><i></i></div><p class="part-kicker">Troisième partie · Gros plan</p><h2 class="part-title">Buongiorno, <br/><em>notte</em></h2><p class="part-sub">Marco Bellocchio, 2003 : l'affaire Moro, ou le cinéma comme conscience de l'Italie</p><p class="part-credit">Projection présentée par Chloé Guerber, suivie d'un temps d'échange<br/>Vendredi 20 novembre 2026, matin</p></div></header>
 <section class="chapter">
-<figure class="poster"><img src="img/buongiorno-notte.jpg" alt="Affiche de Buongiorno, notte" loading="lazy"><figcaption>Buongiorno, notte (Marco Bellocchio, 2003), sélection officielle à Venise, avec Maya Sansa.</figcaption></figure>
+<figure class="poster"><img alt="Affiche de Buongiorno, notte" loading="lazy" src="img/buongiorno-notte.jpg"/><figcaption>Buongiorno, notte (Marco Bellocchio, 2003), sélection officielle à Venise, avec Maya Sansa.</figcaption></figure>
 <h3>Un cinéaste en révolte</h3>
 <p>Depuis <em>Les Poings dans les poches</em> (1965), son premier film, jusqu'à <em>Marx peut attendre</em> (2021), l'œuvre de Marco Bellocchio compose une traversée singulière de l'Italie contemporaine, de ses fractures politiques et de ses tourments intimes. Cinéaste de la révolte et de la désobéissance, il n'a cessé de mettre en crise les grandes institutions : la famille, l'Église, l'école, l'armée, l'État.</p>
 <p><em>Buongiorno, notte</em> en est le cœur : un film sur l'enlèvement d'Aldo Moro par les Brigades rouges, raconté de l'intérieur de la prison du peuple, par les yeux d'une jeune brigadiste.</p>
@@ -528,29 +524,37 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <p>Vient ensuite un mouvement plus sombre, avec les années de plomb. Un cinéma très en prise avec le réel, même lorsqu'il passe par le genre : le polar, le film politique de Francesco Rosi ou d'Elio Petri, et même la comédie, qui grince de plus en plus.</p>
 <h3>1976 : le cinéma est mort, arrive Nanni Moretti</h3>
 <p>En 1976, le cinéma italien est déclaré mort. Et arrive Nanni Moretti, avec un premier film tourné en super-8 et au titre programmatique : <em>Je suis un autarcique</em>. Le mot n'est pas innocent dans un pays qui a connu l'autarcie fasciste : faire du cinéma seul, sans l'industrie.</p>
-<h3>Juste les sous</h3>
-<p>Les moyens de production ne sont plus là. Or il faut 200 films pour en faire un bien : un cinéma de chefs-d'œuvre a besoin d'un cinéma de série, d'un tissu industriel, de techniciens qui tournent tout le temps.</p>
+
+<p><b class="lead-in">Juste les sous.</b> Les moyens de production ne sont plus là. Or il faut 200 films pour en faire un bien : un cinéma de chefs-d'œuvre a besoin d'un cinéma de série, d'un tissu industriel, de techniciens qui tournent tout le temps.</p>
 <p>La solution passe par la coproduction avec la France : pas besoin de Berlusconi. Et par une prise de distance, avec la comédie comme avec la gauche : Moretti se moque autant des recettes du rire que des certitudes militantes de sa génération.</p>
 <blockquote class="pull">Il ne manque pas l'imagination, juste les sous.</blockquote>
 </section>
 <section class="chapter" id="chapitre-11"><p class="ch-num">Chapitre 11</p><h2>Les années de plomb</h2>
 <p>Sur fond de boom économique, mais aussi de peur que l'Italie se bolchevise, alors que le Parti communiste italien est le plus puissant d'Occident, se met en place la <b>stratégie de la tension</b>.</p>
 <p>L'expression naît après la bombe de la piazza Fontana, à Milan, le 12 décembre 1969, posée par des néofascistes. L'idée : multiplier les attentats et les attribuer à la gauche, pour que la population elle-même demande un retour à l'ordre. Comme sous les régimes de Franco ou de Salazar, mais par la peur plutôt que par le coup d'État.</p>
+<aside class="box"><span class="box-label">Repères</span><h4>Les années de plomb en dates</h4><ul class="frise" style="font-size:.95em">
+<li><span class="an">1969</span><span>Bombe de la piazza Fontana à Milan</span></li>
+<li><span class="an">1973</span><span>Crise du pétrole ; Berlinguer propose le compromis historique</span></li>
+<li><span class="an">1976</span><span>Le PCI soutient de l'extérieur un gouvernement DC</span></li>
+<li class="hot"><span class="an">1978</span><span>Enlèvement et assassinat d'Aldo Moro</span></li>
+<li><span class="an">1980</span><span>Attentat de la gare de Bologne</span></li>
+<li><span class="an">1992</span><span>Assassinat de Falcone et Borsellino ; Mains propres</span></li>
+<li><span class="an">1994</span><span>Berlusconi gagne les élections</span></li>
+</ul></aside>
 <h3>Les deux terrorismes</h3>
 <p>439 attentats. D'un côté, les massacres de l'extrême droite, jusqu'à la gare de Bologne en 1980. De l'autre, la guérilla de l'extrême gauche, Brigades rouges en tête, et la « jambisation » : on tire dans les jambes des patrons, des juges, des journalistes, pour les marquer sans les tuer.</p>
 <p>En 1973, la crise du pétrole met fin au miracle. La droite a peur de l'insurrection ; la gauche a peur du retour du fascisme, d'autant que le Chili vient de connaître le coup d'État de Pinochet.</p>
-<h3>Le compromis historique</h3>
-<p>C'est précisément le Chili qui inspire au secrétaire du PCI, Enrico Berlinguer, sa proposition de <b>compromis historique</b> : pour éviter le sort d'Allende, les communistes doivent s'entendre avec la Démocratie chrétienne plutôt que gouverner seuls avec 51 %.</p>
+
+<p><b class="lead-in">Le compromis historique.</b> C'est précisément le Chili qui inspire au secrétaire du PCI, Enrico Berlinguer, sa proposition de <b>compromis historique</b> : pour éviter le sort d'Allende, les communistes doivent s'entendre avec la Démocratie chrétienne plutôt que gouverner seuls avec 51 %.</p>
 <p>Son interlocuteur, c'est Aldo Moro. Moro valide ce rapprochement avant son enlèvement et son assassinat : le PCI s'engage à ne plus toujours s'opposer dans les votes, et soutient de l'extérieur un gouvernement démocrate-chrétien.</p>
 <p>Ce compromis, les Brigades rouges le vivent comme une trahison du communisme. Moro devient leur cible.</p>
-<h3>La mafia, les juges, Mains propres</h3>
-<p>Au début des années 80, une grande guerre entre les familles mafieuses fait 200 morts dans toute l'Italie. Elle met à nu les liens entre la mafia et l'État.</p>
+
+<p><b class="lead-in">La mafia, les juges, Mains propres.</b> Au début des années 80, une grande guerre entre les familles mafieuses fait 200 morts dans toute l'Italie. Elle met à nu les liens entre la mafia et l'État.</p>
 <p>Face à eux, des juges organisent de grands procès, jusqu'à leur mort : en 1992, Giovanni Falcone puis Paolo Borsellino sont assassinés à quelques semaines d'intervalle.</p>
 <p>La même année commence l'opération <b>Mains propres</b>. Des repentis mettent à jour les pots-de-vin, puis un système de corruption généralisée qui finance tous les partis. La Démocratie chrétienne est obligée de se renommer, avant de disparaître.</p>
 <h3>Sur ce grand vide</h3>
 <p>Sur ce grand vide politique arrive Berlusconi, en trois temps : l'homme des télévisions privées, que la première journée a vu naître ; l'entrepreneur qui lance son propre parti, Forza Italia, en 1994 ; le président du Conseil qui gouvernera l'Italie à plusieurs reprises.</p>
 <p>La boucle est bouclée : celui dont on disait qu'il avait tué le cinéma italien gouverne le pays.</p>
-<blockquote class="pull">Des télévisions au pouvoir.</blockquote>
 </section>
 <section class="chapter" id="chapitre-12"><p class="ch-num">Chapitre 12</p><h2>L'affaire Moro</h2>
 <p>Pour revenir au film. Le 16 mars 1978, le jour même où le Parlement doit voter la confiance à un gouvernement soutenu pour la première fois par le PCI, un commando des Brigades rouges attaque la voiture d'Aldo Moro, président de la Démocratie chrétienne, via Fani à Rome. Les cinq hommes de son escorte sont tués.</p>
@@ -558,11 +562,11 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <h3>55 jours</h3>
 <p>Pendant sa captivité, Moro écrit de nombreuses lettres à sa famille, à ses amis politiques, au pape. Il supplie qu'on négocie ; ses anciens collègues le déclarent sous influence, plus lui-même. Le pape Paul VI, son ami, écrit aux « hommes des Brigades rouges » pour demander sa libération « sans conditions ».</p>
 <p>55 jours plus tard, le 9 mai 1978, son corps est retrouvé dans le coffre d'une Renault 4 rouge, via Caetani, à quelques pas des sièges de la Démocratie chrétienne et du Parti communiste. Le symbole est voulu : entre les deux partis du compromis.</p>
-<h3>Todo modo, avant les faits</h3>
-<p><em>Todo modo</em> (Elio Petri, 1976), d'après Leonardo Sciascia, précède les faits. Il raconte comment des notables démocrates-chrétiens se rassemblent pour une retraite d'exercices spirituels, face à une épidémie qui frappe le pays, sous la direction d'un jésuite joué par Mastroianni. Un exercice d'autopunition : les participants meurent un à un.</p>
+
+<p><b class="lead-in">Todo modo, avant les faits.</b> <em>Todo modo</em> (Elio Petri, 1976), d'après Leonardo Sciascia, précède les faits. Il raconte comment des notables démocrates-chrétiens se rassemblent pour une retraite d'exercices spirituels, face à une épidémie qui frappe le pays, sous la direction d'un jésuite joué par Mastroianni. Un exercice d'autopunition : les participants meurent un à un.</p>
 <p>Gian Maria Volonté y joue « M. », copié de Moro dans sa gestuelle, sa tête baissée, son sourire timide. Le film somatise l'envie de la Démocratie chrétienne de s'expier. Après la mort de Moro, il sera retiré de la circulation.</p>
-<h3>Après l'assassinat</h3>
-<p>Après l'assassinat, beaucoup de littérature, et de théories : plus encore que sur l'affaire Kennedy. Moro était pro-arabe en politique étrangère et favorable à l'accord avec la gauche : beaucoup d'ennemis possibles, à Washington comme à Moscou, dans les services secrets comme dans son propre parti. D'où certains films d'hypothèse, qui cherchent le complot derrière les brigadistes.</p>
+
+<p><b class="lead-in">Après l'assassinat.</b> Après l'assassinat, beaucoup de littérature, et de théories : plus encore que sur l'affaire Kennedy. Moro était pro-arabe en politique étrangère et favorable à l'accord avec la gauche : beaucoup d'ennemis possibles, à Washington comme à Moscou, dans les services secrets comme dans son propre parti. D'où certains films d'hypothèse, qui cherchent le complot derrière les brigadistes.</p>
 <p>Les écrits concordants de brigadistes, publiés à partir des années 90, vont permettre d'y voir plus clair. Bellocchio choisit de partir d'eux.</p>
 <h3>Un film de télévision contre la télévision</h3>
 <p>Le film s'appuie sur <em>Le Prisonnier</em>, le livre d'Anna Laura Braghetti, écrit avec Paola Tavella. Braghetti était la locataire de l'appartement où Moro fut détenu, celle qui jouait la jeune femme ordinaire pour couvrir la prison. Elle est morte en novembre 2025, après vingt-deux ans de prison et des années d'engagement social.</p>
@@ -573,8 +577,8 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <p>Trois entrées dans le film : Chiara ; les hallucinations, plutôt que des flash-back, dans le sillage de Jean Vigo et de <em>L'Atalante</em> ; et la télévision, toujours allumée dans la chambre des brigadistes.</p>
 <h3>Bonjour, nuit</h3>
 <p>Le titre vient d'un poème d'Emily Dickinson, « Good Morning — Midnight — », dans la traduction italienne de Nicola Gardini. Bonjour, nuit : une conscience éveillée au milieu de l'obscurité, une image qui surgit dans le noir, comme au cinéma.</p>
-<h3>Le précis de la décision</h3>
-<p>En toile de fond, deux pièces françaises : <em>Les Mains sales</em> de Sartre et <em>Les Justes</em> de Camus, où un terroriste renonce à lancer sa bombe parce que des enfants sont dans la calèche. Cette dialectique folle qui pousse, ou non, à l'action. Le précis de la décision.</p>
+
+<p><b class="lead-in">Le précis de la décision.</b> En toile de fond, deux pièces françaises : <em>Les Mains sales</em> de Sartre et <em>Les Justes</em> de Camus, où un terroriste renonce à lancer sa bombe parce que des enfants sont dans la calèche. Cette dialectique folle qui pousse, ou non, à l'action. Le précis de la décision.</p>
 <blockquote class="pull">Et si Aldo Moro était sorti de l'appartement ?</blockquote>
 <p>C'est l'hypothèse du film. À la fin, Moro marche librement dans les rues de Rome, au petit matin. On pense à Tarantino et à son image revanche, uchronique.</p>
 <p>Mais chez Tarantino, la revanche est consommée : on brûle Hitler, la fiction l'emporte sur l'histoire. Chez Bellocchio, ce rêve est posé à côté des images d'archives des obsèques, sans jamais les remplacer.</p>
@@ -587,12 +591,12 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <p>Et avant le doute, comment le moral tient. Notamment face à cette déception : personne ne les reconnaît. Le prolétariat qu'ils prétendent libérer ne se soulève pas ; les ouvriers défilent contre eux. Personne ne leur donne l'heure, littéralement.</p>
 <p>Et avec ce soupçon : les autres, les politiques, ne seraient-ils pas en train de faire leurs affaires, de laisser mourir Moro par calcul ? À quoi sert l'idéologie face au cynisme ?</p>
 <blockquote class="pull">Personne ne leur donne l'heure.</blockquote>
-<h3>Deux choses italiennes</h3>
-<p>La confrontation, aussi, entre le christianisme et les Brigades rouges : deux choses italiennes. Moro est un catholique fervent, qui prie dans sa cellule. Le procès révolutionnaire qu'on lui fait a quelque chose d'une confession inversée.</p>
-<h3>La musique</h3>
-<p>Et oui, la musique : les accords de <em>Shine On You Crazy Diamond</em> et le chant sans paroles de <em>The Great Gig in the Sky</em>, de Pink Floyd, mêlés à Schubert et à Verdi. La musique vient à l'héroïne comme une pensée.</p>
-<h3>Chiara, l'héroïne tampon</h3>
-<p>Car l'héroïne est centrale. C'est elle qui fait tampon entre le prisonnier et ses geôliers, entre l'appartement et le dehors, entre le film et nous. Imprégnée, elle nous imprègne de ses doutes. Elle épie Moro par un judas : son regard est le nôtre.</p>
+
+<p><b class="lead-in">Deux choses italiennes.</b> La confrontation, aussi, entre le christianisme et les Brigades rouges : deux choses italiennes. Moro est un catholique fervent, qui prie dans sa cellule. Le procès révolutionnaire qu'on lui fait a quelque chose d'une confession inversée.</p>
+
+<p><b class="lead-in">La musique.</b> Et oui, la musique : les accords de <em>Shine On You Crazy Diamond</em> et le chant sans paroles de <em>The Great Gig in the Sky</em>, de Pink Floyd, mêlés à Schubert et à Verdi. La musique vient à l'héroïne comme une pensée.</p>
+
+<p><b class="lead-in">Chiara, l'héroïne tampon.</b> Car l'héroïne est centrale. C'est elle qui fait tampon entre le prisonnier et ses geôliers, entre l'appartement et le dehors, entre le film et nous. Imprégnée, elle nous imprègne de ses doutes. Elle épie Moro par un judas : son regard est le nôtre.</p>
 <p>Et puis la question érotique, discrète mais présente : un corps de jeune femme enfermé avec des hommes, un désir qui n'a pas de place dans la discipline révolutionnaire.</p>
 <p class="aside">On a pu reprocher au film d'adoucir la vraie Braghetti. Le tampon est aussi là : il permet d'entrer dans la cellule sans absoudre ceux qui la tiennent.</p>
 </section>
@@ -602,13 +606,12 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <h3>Une conscience des Italiens</h3>
 <p>Comme si le cinéma était une sorte de conscience des Italiens. La mémoire de la Résistance traverse aussi le film par d'autres voies : un repas de famille où l'on chante les chants des partisans en souvenir d'un camarade, les espérances trahies de la Libération.</p>
 <p>Le néoréalisme, dont la deuxième partie disait qu'il était la source vive du cinéma italien, revient ici comme une voix intérieure. Il ne raconte plus le présent : il le juge.</p>
-<blockquote class="pull">Le néoréalisme comme voix intérieure.</blockquote>
-<h3>Rêvée par l'Italie</h3>
-<p>Chiara n'a pas de rêve personnel. Pas un souvenir d'enfance, pas un fantasme à elle : ce qui lui vient, ce sont toujours des archives, des actualités, et très souvent du cinéma.</p>
+
+<p><b class="lead-in">Rêvée par l'Italie.</b> Chiara n'a pas de rêve personnel. Pas un souvenir d'enfance, pas un fantasme à elle : ce qui lui vient, ce sont toujours des archives, des actualités, et très souvent du cinéma.</p>
 <p>Elle n'a pas d'inconscient privé. Ses rêves ne lui appartiennent pas : elle est rêvée par l'Italie plus qu'elle ne rêve. Son intériorité est faite de la mémoire en images de son pays.</p>
 <blockquote class="pull">Elle ne rêve pas : l'Italie rêve en elle.</blockquote>
-<h3>Un inconscient collectif</h3>
-<p>Bellocchio constitue ainsi le cinéma comme un <b>inconscient collectif</b> pour l'Italie. Non pas au sens d'archétypes éternels, mais d'une mémoire historique, faite d'images : la Résistance filmée par Rossellini, les actualités, les chants des partisans.</p>
+
+<p><b class="lead-in">Un inconscient collectif.</b> Bellocchio constitue ainsi le cinéma comme un <b>inconscient collectif</b> pour l'Italie. Non pas au sens d'archétypes éternels, mais d'une mémoire historique, faite d'images : la Résistance filmée par Rossellini, les actualités, les chants des partisans.</p>
 <p>C'est là que la psychanalyse du film, au sens d'une étude des signes, prend tout son sens : l'inconscient qu'il explore est national, et il est fait de cinéma.</p>
 <p>L'Italie se découvre alors comme une nation-image, intégralement constituée par les images qu'elle produit. Et c'est par elles qu'elle peut se penser.</p>
 <h3>Plus qu'un média, un medium</h3>
@@ -616,33 +619,31 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <p>Et même de l'<b>immédiat</b> : du direct, sans médiation ni distance, un présent qui ne se pense pas.</p>
 <p>Dans la tête de Chiara, le cinéma néoréaliste agit comme un <b>medium</b>, presque au sens spirite : il fait parler les morts, les partisans. Lui médiatise : il monte, il met à distance, il relie 1978 à 1945. Et c'est cette distance qui permet à l'Italie de se penser.</p>
 <p class="aside">La télé informe les brigadistes ; le cinéma fait penser Chiara.</p>
-<h3>La bibliothèque, l'archive et la fiction</h3>
-<p>Chiara semble travailler dans une bibliothèque, aux archives : une vie de bureau ordinaire, qui couvre sa vie clandestine. C'est aussi là que travaille Enzo, le jeune collègue qui écrit un scénario intitulé… <em>Buongiorno, notte</em>. Un personnage porteur de scénario, dans le film même.</p>
+
+<p><b class="lead-in">La bibliothèque, l'archive et la fiction.</b> Chiara semble travailler dans une bibliothèque, aux archives : une vie de bureau ordinaire, qui couvre sa vie clandestine. C'est aussi là que travaille Enzo, le jeune collègue qui écrit un scénario intitulé… <em>Buongiorno, notte</em>. Un personnage porteur de scénario, dans le film même.</p>
 <p>Le lieu de l'archive est donc aussi celui où s'écrit la fiction : le stock et le montage, ce qui garde la mémoire et ce qui imagine une autre fin. Face au pur présent de la télé, l'archive et le cinéma renvoient Chiara à ce qui a été, et à ce qui pourrait être.</p>
 <h3>Juger un héritage</h3>
 <p>Les Brigades rouges se pensaient comme une nouvelle Résistance, les héritiers trahis des partisans, ceux qui allaient achever la révolution que la Libération avait laissée en plan. En faisant remonter les vraies images de la Résistance dans la conscience de Chiara, Bellocchio confronte cette prétention à ce qu'elle revendique.</p>
 <p>Les partisans de <em>Paisà</em> meurent pour libérer un pays ; les brigadistes gardent un vieil homme dans une chambre.</p>
 <p>Critère de vérité ou tendresse ? Les deux, mon capitaine. Le cinéma juge l'héritage revendiqué, et laisse à Chiara une chance d'être rattrapée par ces images.</p>
-<h3>Récapituler l'Italie et le cinéma</h3>
-<p>Le film récapitule l'histoire de l'Italie et celle du cinéma, en tant que le cinéma fait partie de l'histoire et va dans un sens. Bellocchio n'est pas un fan du romantisme, ni de l'héroïsme. Dont acte, mais tout de même : le rêve de Moro libre est l'un des plus beaux plans romantiques du cinéma italien récent.</p>
+
+<p><b class="lead-in">Récapituler l'Italie et le cinéma.</b> Le film récapitule l'histoire de l'Italie et celle du cinéma, en tant que le cinéma fait partie de l'histoire et va dans un sens. Bellocchio n'est pas un fan du romantisme, ni de l'héroïsme. Dont acte, mais tout de même : le rêve de Moro libre est l'un des plus beaux plans romantiques du cinéma italien récent.</p>
 <p>Source vive du cinéma : esprit Lumière, qui enregistre le réel, esprit Méliès, qui l'enchante. À mon sens, hybridé ici par le genre, le film de prise d'otage. Puis un vrai surgissement d'images, d'hallucinations, comme une psychanalyse, au sens d'une étude des signes, proprement cinématographique.</p>
-<h3>Faire un film, faire un choix</h3>
-<p>Une réflexion sur le choix et le doute, avec plusieurs fins possibles, que le film laisse coexister. Qu'est-ce que c'est que faire un film ? Qu'est-ce que c'est que faire un choix ? (J'aime bien.)</p>
+
+<p><b class="lead-in">Faire un film, faire un choix.</b> Une réflexion sur le choix et le doute, avec plusieurs fins possibles, que le film laisse coexister. Qu'est-ce que c'est que faire un film ? Qu'est-ce que c'est que faire un choix ? (J'aime bien.)</p>
 <p>La télévision a tué le cinéma italien, disait la première journée. Le néoréalisme en reste la source vive, disait la deuxième. Ici, il revient comme conscience.</p>
-<blockquote class="pull">Qu'est-ce que c'est que faire un film ? Qu'est-ce que c'est que faire un choix ?</blockquote>
 </section>
-<header class="part" id="partie-4"><div class="part-in"><div class="tricolore"><i></i><i></i><i></i></div><p class="part-kicker">Quatrième partie</p><h2 class="part-title">Marco Bellocchio <br><em>ou l'Italie désaccordée</em></h2><p class="part-sub">Soixante ans de cinéma pour psychanalyser l'Italie, des Poings dans les poches à Marx peut attendre</p><p class="part-credit">Conférence de Mathieu Macheret (Le Monde, France Culture)<br/>Vendredi 20 novembre 2026, après-midi</p></div></header>
+<header class="part" id="partie-4"><div class="part-in"><div class="tricolore"><i></i><i></i><i></i></div><p class="part-kicker">Quatrième partie</p><h2 class="part-title">Marco Bellocchio <br/><em>ou l'Italie désaccordée</em></h2><p class="part-sub">Soixante ans de cinéma pour psychanalyser l'Italie, des Poings dans les poches à Marx peut attendre</p><p class="part-credit">Conférence de Mathieu Macheret (Le Monde, France Culture)<br/>Vendredi 20 novembre 2026, après-midi</p></div></header>
 <section class="chapter">
 <h3>Retour sur le film du matin</h3>
 <p>Mathieu Macheret commence par revenir sur <em>Buongiorno, notte</em>, avec une formule : le passage de la politique à l'éthique. Le film ne demande plus qui avait raison, mais ce que chacun fait de sa décision.</p>
 <p>Les films d'époque, c'est toujours un peu un bal masqué : costumes, voitures, décors reconstitués. Mais ici, tout se joue dans un appartement, et le bal masqué devient huis clos.</p>
 <p>Vingt ans plus tard, Bellocchio revient encore sur ce meurtre du père qu'est l'enlèvement d'Aldo Moro, avec la série <em>Esterno notte</em> (2022) : le contrechamp de <em>Buongiorno, notte</em>, l'affaire vue de l'extérieur, de la famille, de l'Église, des politiques. En série, cette fois.</p>
-<figure class="poster"><img src="img/b-esterno.png" alt="Affiche d&#x27;Esterno notte" loading="lazy"><figcaption>Esterno notte (2022), la série : « Pour renverser le pouvoir, on vise sa tête ».</figcaption></figure>
-<h3>L'enfant terrible de la modernité</h3>
-<p>La place de Bellocchio est particulière. Enfant terrible de la modernité, il va conserver son exigence par-delà l'effondrement que la première journée a raconté : celui de toute l'infrastructure cinématographique de l'Italie.</p>
+<figure class="poster"><img alt="Affiche d'Esterno notte" loading="lazy" src="img/b-esterno.png"/><figcaption>Esterno notte (2022), la série : « Pour renverser le pouvoir, on vise sa tête ».</figcaption></figure>
+
+<p><b class="lead-in">L'enfant terrible de la modernité.</b> La place de Bellocchio est particulière. Enfant terrible de la modernité, il va conserver son exigence par-delà l'effondrement que la première journée a raconté : celui de toute l'infrastructure cinématographique de l'Italie.</p>
 <p>C'est le quatrième temps de notre histoire : la réanimation. Quand le néoréalisme est éteint et les filons taris, il reste un cinéaste pour faire remonter ce passé.</p>
 <p>Une œuvre composée de thèmes adultes, mais d'une force juvénile. Voilà ce qui peut parler à des collégiens et à des lycéens.</p>
-<blockquote class="pull">Des thèmes adultes, une force juvénile.</blockquote>
 </section>
 <section class="chapter" id="chapitre-16"><p class="ch-num">Chapitre 16</p><h2>Un cinéaste dans l'histoire</h2>
 <p>Marco Bellocchio naît en 1939, à Bobbio, près de Plaisance, sous le régime fasciste, au moment où commence la Seconde Guerre mondiale. Son adolescence traverse le boom italien, sa jeunesse les années de plomb, son âge adulte l'ère Berlusconi.</p>
@@ -650,60 +651,58 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <h3>Une psychanalyse à ciel ouvert</h3>
 <p>Il vient de la bourgeoisie moyenne de l'Italie du Nord, et sa biographie nourrit toute l'œuvre. La mort de son père, quand il est adolescent. La froideur d'une mère bigote. Le suicide de son frère jumeau, Camillo, en 1968. Un autre frère, malade mental.</p>
 <p>Fils en révolte, frère en déprime, père discrédité, mère haïe et aimée : ses films rejouent sans cesse ces figures. Une psychanalyse à ciel ouvert.</p>
-<blockquote class="pull">Fils en révolte, frère en déprime, père discrédité, mère haïe et aimée.</blockquote>
-<h3>De Mao à la folie</h3>
-<p>À la fin des années 60, Bellocchio s'engage dans un groupe maoïste. Le désenchantement révolutionnaire vient vite. Il en reste une sensibilité aux thèmes sociaux.</p>
+
+<p><b class="lead-in">De Mao à la folie.</b> À la fin des années 60, Bellocchio s'engage dans un groupe maoïste. Le désenchantement révolutionnaire vient vite. Il en reste une sensibilité aux thèmes sociaux.</p>
 <p>Mais aussi à la folie. En 1975, il cosigne <em>Fous à délier</em>, un documentaire sur l'asile de Parme et les patients qu'on en fait sortir : le mouvement antipsychiatrique, qui aboutira en 1978 à la fermeture des asiles en Italie, le fascine.</p>
 <p>De là un intérêt pour l'inconscient, y compris l'inconscient du pays. La folie sera le fil rouge de l'œuvre.</p>
-<h3>L'emprise de Fagioli</h3>
-<p>La psychanalyse connaît alors un gros succès en Italie. Bellocchio se rapproche de Massimo Fagioli, un psychiatre dissident qui anime des séances d'« analyse collective » et promet une psychanalyse collective et anti-freudienne, fondée sur l'interprétation des rêves.</p>
+
+<p><b class="lead-in">L'emprise de Fagioli.</b> La psychanalyse connaît alors un gros succès en Italie. Bellocchio se rapproche de Massimo Fagioli, un psychiatre dissident qui anime des séances d'« analyse collective » et promet une psychanalyse collective et anti-freudienne, fondée sur l'interprétation des rêves.</p>
 <p>Fagioli l'aide à écrire. Ensemble, ils font quatre films, de <em>Le Diable au corps</em> (1986) à <em>Le Rêve du papillon</em> (1994), autour du désir et du rêve.</p>
 <p>Bellocchio racontera après coup cette période comme une sorte d'emprise du psychanalyste sur lui. La rupture vient avec <em>Le Prince de Hombourg</em> (1997), d'après Kleist.</p>
 <h3>L'histoire comme fleuve noir</h3>
 <p>De <em>Les Poings dans les poches</em> (1965) jusqu'à son dernier long métrage, <em>L'Enlèvement</em> (2023), Bellocchio fait la psychanalyse de son pays, et en particulier des années de plomb. Ses personnages métabolisent ce qui se joue en Italie.</p>
 <p><em>L'Enlèvement</em> raconte l'affaire Mortara : en 1858, à Bologne, un enfant juif est arraché à sa famille par l'État pontifical pour être élevé dans la foi catholique. <em>Vincere</em> (2009) raconte l'effacement de la première femme de Mussolini, Ida Dalser.</p>
 <p>Chez lui, l'histoire est un fleuve noir et impétueux, et la conscience personnelle en est le reflet.</p>
-<figure class="poster"><img src="img/b-rapito.jpg" alt="Affiche de Rapito" loading="lazy"><figcaption>Rapito, L'Enlèvement (2023), affiche italienne : l'affaire Mortara.</figcaption></figure>
+<figure class="poster"><img alt="Affiche de Rapito" loading="lazy" src="img/b-rapito.jpg"/><figcaption>Rapito, L'Enlèvement (2023), affiche italienne : l'affaire Mortara.</figcaption></figure>
 </section>
 <section class="chapter" id="chapitre-17"><p class="ch-num">Chapitre 17</p><h2>Les années de révolte</h2>
 <h3>Extrait 1 : Les Poings dans les poches (1965)</h3>
 <p>Bellocchio a 25 ans. Il tourne son premier film dans la maison familiale de Bobbio, avec des amis et peu d'argent : un film autoproduit, en forme de portrait mental. Un jeu de massacre familial : Alessandro, épileptique, joué par Lou Castel, décide d'éliminer un à un les membres de sa famille.</p>
 <p>Voile d'argent à Locarno, distingué à Venise : le film fait l'effet d'une bombe.</p>
-<figure class="poster"><img src="img/b-poings.jpg" alt="Affiche des Poings dans les poches" loading="lazy"><figcaption>I pugni in tasca, Les Poings dans les poches (1965), avec Lou Castel et Paola Pitagora, musique d'Ennio Morricone.</figcaption></figure>
-<h3>Une réplique à la Nouvelle Vague</h3>
-<p>Un expressionnisme poétique. Avec Bernardo Bertolucci (<em>Prima della rivoluzione</em>, 1964), Bellocchio annonce un droit de réplique italien à la Nouvelle Vague française.</p>
+<figure class="poster"><img alt="Affiche des Poings dans les poches" loading="lazy" src="img/b-poings.jpg"/><figcaption>I pugni in tasca, Les Poings dans les poches (1965), avec Lou Castel et Paola Pitagora, musique d'Ennio Morricone.</figcaption></figure>
+
+<p><b class="lead-in">Une réplique à la Nouvelle Vague.</b> Un expressionnisme poétique. Avec Bernardo Bertolucci (<em>Prima della rivoluzione</em>, 1964), Bellocchio annonce un droit de réplique italien à la Nouvelle Vague française.</p>
 <p>Bon, vraiment pas agréable. Montage heurté, tout en syncope et en emballement. Le film s'ouvre et se clôt sur le motif du miroir.</p>
 <p>Un geste désaccordé : une sarabande d'états limites, un état nerveux extrême, entre névrose et psychose. Un noir et blanc très cru. Arraché aux circonstances : un portrait à vif. Plus tard viendra un néoclassicisme plus calme.</p>
-<h3>La maison-prison</h3>
-<p>La maison est le siège d'un ennui terrible. Un château gothique qui est une prison, un peu comme, plus tard, l'appartement de <em>Buongiorno, notte</em>. Le père est absent, la mère est aveugle.</p>
+
+<p><b class="lead-in">La maison-prison.</b> La maison est le siège d'un ennui terrible. Un château gothique qui est une prison, un peu comme, plus tard, l'appartement de <em>Buongiorno, notte</em>. Le père est absent, la mère est aveugle.</p>
 <p>Le rituel bourgeois bien orchestré finit en film saillant, rude. Les miroirs sont là pour capter l'angoisse : la psyché, au double sens du mot, comme retord de la personnalité.</p>
 <p>Le milieu est confiné, mais les angles et les plans varient sans cesse. Un tournage énergique, qui disqualifie toute maîtrise formelle pour faire naître un art <em>sui generis</em>, spontané, secoué, à l'image des élans passionnels de la famille.</p>
 <h3>1965 : 68 s'annonce</h3>
 <p>Une famille corrompue de l'intérieur. La provocation n'est peut-être pas unique, mais en Italie la famille est particulièrement sacrée.</p>
 <p>Le film crée un choc, et suscite un soutien. La jeunesse des années 60 s'y est reconnue : prise dans un arbre généalogique croupissant. On est en 1965 ; 68 s'annonce.</p>
-<blockquote class="pull">Une jeunesse prise dans un arbre généalogique croupissant.</blockquote>
 <h3>Extrait 2 : La Chine est proche (1967)</h3>
 <p>Deux ans plus tard, un deuxième film, peu connu. Il parle des groupes maoïstes : des jeunes qui veulent s'émanciper d'un communisme soviétique jugé patriarcal. La montée en radicalité, au même moment que <em>La Chinoise</em> de Godard.</p>
 <p>Mais Bellocchio est plus proche de la comédie à l'italienne : féroce et satirique. Une farce buñuélienne, un esprit frondeur et grotesque, moqueur. Un état des lieux de la gauche.</p>
 <p>Ennio Morricone signe la musique : la respectabilité dès le deuxième film.</p>
-<figure class="poster"><img src="img/b-cina.jpg" alt="Jaquette de La Cina è vicina" loading="lazy"><figcaption>La Cina è vicina, La Chine est proche (1967), avec Glauco Mauri. Jaquette DVD.</figcaption></figure>
-<h3>L'aristocrate et le peuple</h3>
-<p>Le synopsis : un riche propriétaire se présente aux élections sous l'étiquette socialiste, et son jeune frère, maoïste dans un groupuscule de trois membres, veut l'en empêcher. Encore la famille, mais sous un angle politique cette fois. Le film observe autant la fascination révolutionnaire que son impuissance.</p>
+<figure class="poster"><img alt="Jaquette de La Cina è vicina" loading="lazy" src="img/b-cina.jpg"/><figcaption>La Cina è vicina, La Chine est proche (1967), avec Glauco Mauri. Jaquette DVD.</figcaption></figure>
+
+<p><b class="lead-in">L'aristocrate et le peuple.</b> Le synopsis : un riche propriétaire se présente aux élections sous l'étiquette socialiste, et son jeune frère, maoïste dans un groupuscule de trois membres, veut l'en empêcher. Encore la famille, mais sous un angle politique cette fois. Le film observe autant la fascination révolutionnaire que son impuissance.</p>
 <p>L'extrait : une scène de meeting sur la place publique, dans un petit village. L'aristocrate qui se dit du côté du peuple va se faire recevoir. Attitude de mépris et de domination, grande nervosité, bajoues pendantes (très Bayrou, ai-je noté). Plutôt que de séduire, il met tout le monde contre lui.</p>
-<h3>Mettre en scène le collectif</h3>
-<p>La communauté populaire dégénère. La scène somatise un pays sous tension, jusqu'au burlesque.</p>
+
+<p><b class="lead-in">Mettre en scène le collectif.</b> La communauté populaire dégénère. La scène somatise un pays sous tension, jusqu'au burlesque.</p>
 <p>Talent de Bellocchio à mettre en scène le collectif : une multiplicité de visages, des dynamiques bien orchestrées par des variations d'axe. Télescopage des dialogues, entrelacement du in et du off, des répliques très rebondissantes. Une logique du pire, jusqu'à la casse de la voiture, idole bourgeoise.</p>
 <p>L'idéalisme bourgeois mis en difficulté par la trivialité anarchisante du populaire : la différence de classe. Un film de jeunesse où l'on reconnaît son rire sardonique, qui appelle de ses vœux un écroulement de l'ordre établi.</p>
 <h3>Extrait 3 : Au nom du père (1972)</h3>
 <p>Troisième long métrage, film étrange : un pic de modernité, presque d'avant-garde. Un moment révolutionnaire presque gothique, en rupture avec le réalisme.</p>
 <p>Il dépeint le quotidien d'un collège de jésuites à la fin des années 50 comme un asile d'aliénés. Un ordre unique, qui provoque des troubles chez les pensionnaires. Une poignée d'agitateurs nietzschéens va essayer de renverser l'ordre établi, en huis clos.</p>
 <p>Le titre détourne la formule liturgique, pour parler du patriarcat plus que simplement de la religion.</p>
-<figure class="poster"><img src="img/b-padre.jpg" alt="Pochette de Nel nome del padre" loading="lazy"><figcaption>Nel nome del padre, Au nom du père (1972), pochette de la bande originale de Nicola Piovani.</figcaption></figure>
-<h3>Une boîte mentale</h3>
-<p>Le collège est une boîte mentale où naissent des hallucinations et des cauchemars. Plus de distinction claire entre le réel et le symbolique, parfois même des visions du futur, comme la destruction du lieu au bulldozer, qui souligne son archaïsme.</p>
+<figure class="poster"><img alt="Pochette de Nel nome del padre" loading="lazy" src="img/b-padre.jpg"/><figcaption>Nel nome del padre, Au nom du père (1972), pochette de la bande originale de Nicola Piovani.</figcaption></figure>
+
+<p><b class="lead-in">Une boîte mentale.</b> Le collège est une boîte mentale où naissent des hallucinations et des cauchemars. Plus de distinction claire entre le réel et le symbolique, parfois même des visions du futur, comme la destruction du lieu au bulldozer, qui souligne son archaïsme.</p>
 <p>Un théâtre satirique et grotesque, qui permet de sortir d'un réalisme qui est, en ce début des années 70, devenu le cinéma bourgeois. Résonance avec d'autres films limites, comme <em>Salò ou les 120 journées de Sodome</em> de Pasolini.</p>
-<h3>Foucault au collège</h3>
-<p>L'extrait : le moment de la messe où une diatribe est prononcée contre la masturbation, obsession terrible de toutes les familles du XIX<sup>e</sup> siècle. C'est un objet d'étude de Foucault, dans <em>Les Anormaux</em> et l'<em>Histoire de la sexualité</em> : la répression par les institutions éducatives, familiales et religieuses. Beaucoup de résonances entre Foucault et Bellocchio.</p>
+
+<p><b class="lead-in">Foucault au collège.</b> L'extrait : le moment de la messe où une diatribe est prononcée contre la masturbation, obsession terrible de toutes les familles du XIX<sup>e</sup> siècle. C'est un objet d'étude de Foucault, dans <em>Les Anormaux</em> et l'<em>Histoire de la sexualité</em> : la répression par les institutions éducatives, familiales et religieuses. Beaucoup de résonances entre Foucault et Bellocchio.</p>
 <p>La thèse de Foucault : une érotique de la rétention. Amenée dans l'ordre du discours, la sexualité devient un fantasme. C'est ce qu'on voit ici : le discours de répression provoque une envie torride.</p>
 <h3>Salement baroque</h3>
 <p>Jusqu'à faire s'animer une sainte. Attention aux visages, dans un expressionnisme à la Otto Dix, celui de la Nouvelle Objectivité, qui les déforme. Puis une vision religieuse : quelque chose de baroque, salement baroque, avec cette Vierge qui marche, lévite presque vers l'adolescent.</p>
@@ -714,31 +713,30 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <h3>Extrait 4 : Le Saut dans le vide (1980)</h3>
 <p>Deux extraits : une scène nocturne et la dernière scène du film. De nouveau la famille, au début des années 80, barricadée du fait des années de plomb : une société de contrôle. Un juge, joué par Michel Piccoli, et sa sœur, jouée par Anouk Aimée, vivent ensemble comme un vieux couple, liés par l'habitude et la dépendance.</p>
 <p>La narration est compliquée à suivre dans ces extraits, mais ils montrent l'importance du rêve chez Bellocchio.</p>
-<figure class="poster"><img src="img/b-saut.jpg" alt="Affiche du Saut dans le vide" loading="lazy"><figcaption>Le Saut dans le vide (1980), avec Anouk Aimée et Michel Piccoli, affiche française.</figcaption></figure>
-<h3>Le rêve sans apparat</h3>
-<p>Estompement de la différence entre le rêve et la normalité, sans, encore une fois, de soulignement du passage. La beauté du non-recours aux artifices fantastiques.</p>
+<figure class="poster"><img alt="Affiche du Saut dans le vide" loading="lazy" src="img/b-saut.jpg"/><figcaption>Le Saut dans le vide (1980), avec Anouk Aimée et Michel Piccoli, affiche française.</figcaption></figure>
+
+<p><b class="lead-in">Le rêve sans apparat.</b> Estompement de la différence entre le rêve et la normalité, sans, encore une fois, de soulignement du passage. La beauté du non-recours aux artifices fantastiques.</p>
 <p>Le second extrait, le suicide de Piccoli : un plan-séquence où la caméra prend une indépendance totale, caressant les pièces, suivant à travers le salon. Piccoli est comme surpris ici ou là par cette caméra : une scène chorégraphique, un jeu du chat et de la souris.</p>
 <p>Une définition quasi pure de l'espace mental : l'appartement s'établit comme une psyché (ça pousse à prendre soin de son appart). Et le suicide, pour sortir de cet espace mental.</p>
 <p class="aside">Deux données très importantes du cinéma de Bellocchio : la théâtralité, et le rêve sans apparat.</p>
 <h3>Extrait 5 : Le Diable au corps (1986)</h3>
 <p>Dans les années 80, après la déception révolutionnaire et les années de plomb, qui débouchent sur le renforcement des pouvoirs réactionnaires, Bellocchio s'en remet au désir. Une adaptation très lointaine du roman de Radiguet, et le premier des quatre films avec son psychanalyste.</p>
 <p>Les échecs révolutionnaires ne sont plus abordés dans leur dimension collective, mais en suivant le fil de la pulsion individuelle. Point d'incandescence de l'œuvre. L'intime ne remplace pas la politique : il la met à l'épreuve.</p>
-<figure class="poster"><img src="img/b-diable.jpg" alt="Affiche du Diable au corps" loading="lazy"><figcaption>Le Diable au corps (1986), avec Maruschka Detmers, affiche française.</figcaption></figure>
-<h3>Un foyer sexuel au milieu d'un procès</h3>
-<p>La musique prend encore le pas sur les paroles, comme les corps l'emportent sur le discours. La scène mêle un procès des Brigades rouges à une situation érotique. Deux camps : les repentis et les irréductibles, ces derniers lisant ostensiblement des journaux pour se moquer de la justice.</p>
+<figure class="poster"><img alt="Affiche du Diable au corps" loading="lazy" src="img/b-diable.jpg"/><figcaption>Le Diable au corps (1986), avec Maruschka Detmers, affiche française.</figcaption></figure>
+
+<p><b class="lead-in">Un foyer sexuel au milieu d'un procès.</b> La musique prend encore le pas sur les paroles, comme les corps l'emportent sur le discours. La scène mêle un procès des Brigades rouges à une situation érotique. Deux camps : les repentis et les irréductibles, ces derniers lisant ostensiblement des journaux pour se moquer de la justice.</p>
 <p>La logique du désir envahit peu à peu toute la scène. Télescopage des distances, virtuosité des croisements entre arrière-plan et avant-plan, entre ce qui est vu et ceux qui voient.</p>
 <p>Un foyer sexuel surgit au milieu du procès : la sexualité supplante la mise en scène judiciaire. Giulia et Andrea y assistent à distance, et en même temps s'y projettent. Cela préfigure leur lien à venir.</p>
-<h3>« Laissez-les finir ! »</h3>
-<p>Agitation et chaos surviennent, comme dans les extraits précédents, sauf pour les amants, qui poursuivent l'acte dans le déni du cadre du pouvoir qui les emprisonne. La possibilité de nier le pouvoir par la loi du désir : « Laissez-les finir ! » L'union des corps contre la puissance de la restriction.</p>
+
+<p><b class="lead-in">« Laissez-les finir ! ».</b> Agitation et chaos surviennent, comme dans les extraits précédents, sauf pour les amants, qui poursuivent l'acte dans le déni du cadre du pouvoir qui les emprisonne. La possibilité de nier le pouvoir par la loi du désir : « Laissez-les finir ! » L'union des corps contre la puissance de la restriction.</p>
 <p>Une scène de fellation non simulée suscitera un scandale. Emballement des journalistes, bêtise des institutions culturelles. Un stigmate pour l'actrice, Maruschka Detmers, alors que la scène n'est, à mes yeux, ni choquante ni provocatrice.</p>
-<blockquote class="pull">Nier le pouvoir par la loi du désir.</blockquote>
 </section>
 <section class="chapter" id="chapitre-19"><p class="ch-num">Chapitre 19</p><h2>L'Italie mise en scène</h2>
 <h3>Extrait 6 : Le Sourire de ma mère (2002)</h3>
 <p>Un peintre athée, joué par Sergio Castellitto, apprend que sa famille veut faire béatifier sa mère, qu'il sait ne pas avoir été une sainte. Arrive la figure du champ-contrechamp, dans un cinéma de dialogue. Un affaissement ? Plutôt un échange d'une intelligence merveilleuse : un affrontement entre deux points de vue irréconciliables, qui jouent l'un de l'autre.</p>
-<figure class="poster"><img src="img/b-sourire.jpg" alt="Affiche du Sourire de ma mère" loading="lazy"><figcaption>Le Sourire de ma mère (2002), avec Sergio Castellitto, sélection officielle à Cannes.</figcaption></figure>
-<h3>Un sacré kitsch</h3>
-<p>Retour des images pieuses, d'un pseudo-sacré que Bellocchio remarque dans une Italie qui va vers l'extrême droite. Un religieux kitsch et cynique, puissamment dénoncé ici, sur une nappe planante de musique.</p>
+<figure class="poster"><img alt="Affiche du Sourire de ma mère" loading="lazy" src="img/b-sourire.jpg"/><figcaption>Le Sourire de ma mère (2002), avec Sergio Castellitto, sélection officielle à Cannes.</figcaption></figure>
+
+<p><b class="lead-in">Un sacré kitsch.</b> Retour des images pieuses, d'un pseudo-sacré que Bellocchio remarque dans une Italie qui va vers l'extrême droite. Un religieux kitsch et cynique, puissamment dénoncé ici, sur une nappe planante de musique.</p>
 <p>« Il faut un père. » Ce que vous avez combattu, on veut le reconstituer : un grand saut dans la fiction, même si l'on n'y croit pas, par intérêt. Toute l'Italie devient une mise en scène. Le moment néo-baroque, presque : des artifices consolateurs.</p>
 <p>C'est plutôt à ce niveau que se situe la critique des médias : la mise en scène permanente.</p>
 <h3>Extrait 7 : Buongiorno, notte, l'enfant</h3>
@@ -748,40 +746,40 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <h3>Extrait 8 : Vincere (2009)</h3>
 <p>La femme et le fils de Mussolini. Ida Dalser, sa première compagne, qui lui donna un fils, Benito Albino : une liaison dont le Duce a essayé de supprimer toutes les traces. Les deux mourront à l'asile, et finiront dans la fosse commune.</p>
 <p><em>Vincere</em>, ou l'histoire de biais. Le socialisme et le pacifisme jetés aux ordures pour le fascisme, par ce primo-adoptant qu'est Mussolini. Le film met en scène l'érotique du fascisme, et son esthétique, le futurisme, plastique, striée par la musique.</p>
-<figure class="poster"><img src="img/b-vincere.jpg" alt="Affiche de Vincere" loading="lazy"><figcaption>Vincere (2009), avec Giovanna Mezzogiorno et Filippo Timi : au pied du couple, le buste brisé du Duce.</figcaption></figure>
-<h3>Qui désigne le fou</h3>
-<p>Premier extrait : Ida se jette dans une réunion fasciste pour retrouver Benito, mais elle est désignée comme folle et envoyée à l'asile. Le pouvoir, c'est celui qui peut désigner qui est fou. L'asile d'aliénés, lieu de prédilection d'un Bellocchio décidément foucaldien.</p>
+<figure class="poster"><img alt="Affiche de Vincere" loading="lazy" src="img/b-vincere.jpg"/><figcaption>Vincere (2009), avec Giovanna Mezzogiorno et Filippo Timi : au pied du couple, le buste brisé du Duce.</figcaption></figure>
+
+<p><b class="lead-in">Qui désigne le fou.</b> Premier extrait : Ida se jette dans une réunion fasciste pour retrouver Benito, mais elle est désignée comme folle et envoyée à l'asile. Le pouvoir, c'est celui qui peut désigner qui est fou. L'asile d'aliénés, lieu de prédilection d'un Bellocchio décidément foucaldien.</p>
 <p>Dans la pénombre, les recoins de l'histoire, d'où l'on aperçoit la folie de l'Italie : une schizophrénie collective, qu'on voit dans les images d'archives.</p>
 <p>Second extrait : le fils de Mussolini, lui aussi enfermé, rejoue son père, visage convulsif, devant les images du Duce. « Vincere », nous vaincrons. Un concours de grimaces, l'outrance du fascisme, un saisissant jeu de reflets.</p>
 </section>
 <section class="chapter" id="chapitre-20"><p class="ch-num">Chapitre 20</p><h2>Soixante ans de cinéma</h2>
 <p>Les années 2010 voient de nouvelles évolutions. Plus mineures ? Bellocchio devient un cinéaste journaliste, qui se fournit dans l'actualité italienne. <em>La Belle Endormie</em> (2012) reprend l'affaire Eluana Englaro, jeune femme dans le coma depuis dix-sept ans, dont le père obtint en 2008-2009 le droit de faire arrêter l'alimentation, au milieu d'une tempête politique et religieuse. Dessiner une fiction à partir d'un fait d'actualité : il a la facilité de le faire.</p>
 <p>Soixante ans de création : pas seulement des films, mais aussi des documentaires et des séries, <em>Esterno notte</em> et <em>Portobello</em>, sur l'affaire Enzo Tortora.</p>
-<figure class="poster"><img src="img/b-belle.jpg" alt="Affiche de La Belle Endormie" loading="lazy"><figcaption>La Belle Endormie (2012), avec Isabelle Huppert, Toni Servillo et Alba Rohrwacher.</figcaption></figure>
+<figure class="poster"><img alt="Affiche de La Belle Endormie" loading="lazy" src="img/b-belle.jpg"/><figcaption>La Belle Endormie (2012), avec Isabelle Huppert, Toni Servillo et Alba Rohrwacher.</figcaption></figure>
 <h3>Marx peut attendre (2021)</h3>
 <p>En 2021, un documentaire sous forme de film de famille : <em>Marx peut attendre</em>. Tout un programme. C'est la phrase que Bellocchio aurait opposée à son frère jumeau Camillo, qui lui demandait de l'aide peu avant son suicide en 1968 : mettre en pause ses engagements politiques pour un drame existentiel.</p>
 <p>Le film désigne l'aveuglement familial, qui n'a pas empêché le frère d'arriver à ses fins, à sa fin.</p>
-<figure class="poster"><img src="img/b-marx.jpg" alt="Affiche de Marx peut attendre" loading="lazy"><figcaption>Marx peut attendre (2021) : les jumeaux Marco et Camillo enfants. Palme d'or d'honneur à Cannes.</figcaption></figure>
-<h3>L'ombre de la famille</h3>
-<p>L'ombre de la famille dans tous ses films : n'est-ce pas un peu réducteur ? Ce qui est sûr, c'est qu'il fait lui-même retour sur sa famille. Le frère jumeau, son reflet, qui se suicide : cela peut interroger sur l'alter ego, sur la ligne de vie numéro deux. Il aura aussi eu un frère dément.</p>
-<h3>Les hétérotopies</h3>
-<p>Foucault appelle hétérotopies ces « espaces autres » où l'espace et le temps ne s'écoulent pas de la même manière : l'asile, la prison, le collège, le cimetière. Nombreux sont les lieux visités par Bellocchio sur ce thème : la maison de Bobbio, le collège des jésuites, l'appartement-prison, l'asile de <em>Vincere</em>.</p>
-<h3>Une hypothèse à vérifier</h3>
-<p>Depuis la troisième partie, une hypothèse court dans ces pages : Bellocchio psychanalyse l'Italie par le cinéma. On dit souvent que ses grands thèmes sont la famille et la folie. Ce sont précisément les objets de la psychanalyse : la famille, avec le père, la mère et le fils, le roman familial et l'Œdipe ; la folie, entre névrose et psychose.</p>
+<figure class="poster"><img alt="Affiche de Marx peut attendre" loading="lazy" src="img/b-marx.jpg"/><figcaption>Marx peut attendre (2021) : les jumeaux Marco et Camillo enfants. Palme d'or d'honneur à Cannes.</figcaption></figure>
+
+<p><b class="lead-in">L'ombre de la famille.</b> L'ombre de la famille dans tous ses films : n'est-ce pas un peu réducteur ? Ce qui est sûr, c'est qu'il fait lui-même retour sur sa famille. Le frère jumeau, son reflet, qui se suicide : cela peut interroger sur l'alter ego, sur la ligne de vie numéro deux. Il aura aussi eu un frère dément.</p>
+
+<p><b class="lead-in">Les hétérotopies.</b> Foucault appelle hétérotopies ces « espaces autres » où l'espace et le temps ne s'écoulent pas de la même manière : l'asile, la prison, le collège, le cimetière. Nombreux sont les lieux visités par Bellocchio sur ce thème : la maison de Bobbio, le collège des jésuites, l'appartement-prison, l'asile de <em>Vincere</em>.</p>
+
+<p><b class="lead-in">Une hypothèse à vérifier.</b> Depuis la troisième partie, une hypothèse court dans ces pages : Bellocchio psychanalyse l'Italie par le cinéma. On dit souvent que ses grands thèmes sont la famille et la folie. Ce sont précisément les objets de la psychanalyse : la famille, avec le père, la mère et le fils, le roman familial et l'Œdipe ; la folie, entre névrose et psychose.</p>
 <p>Une troisième entrée les tient ensemble : l'<b>enfermement</b>, les lieux comme espaces mentaux des personnages. Et un langage les traverse toutes : le rêve, que Freud appelait la voie royale vers l'inconscient.</p>
 <h3>La famille, forme du pouvoir</h3>
 <p>Mais Bellocchio ne les applique pas seulement à des individus. Chez lui, la famille est la forme même du pouvoir italien : le pape est le Saint-Père, Mussolini se veut le père de la nation, la mafia s'appelle la famille, et l'enlèvement de Moro est un meurtre du père. « Il faut un père », dit-on dans <em>Le Sourire de ma mère</em>.</p>
 <p>Ce n'est pas un trait de caractère national, c'est une institution datée, et en crise. Le divorce n'est légalisé qu'en 1970, confirmé par référendum en 1974 ; le crime d'honneur reste dans le code pénal jusqu'en 1981. <em>Les Poings dans les poches</em> attaque la famille au moment même où le pays se dispute sur ce qu'elle doit être.</p>
-<h3>L'enfermement, espace mental</h3>
-<p>Chez Bellocchio, le lieu clos est la psyché du personnage. La maison de Bobbio des <em>Poings dans les poches</em>, château gothique où les miroirs captent l'angoisse. Le collège des jésuites d'<em>Au nom du père</em>, boîte mentale où naissent les hallucinations. L'appartement du <em>Saut dans le vide</em>, que la caméra parcourt comme une psyché, et dont on ne sort que par la fenêtre. L'appartement-prison de <em>Buongiorno, notte</em>. L'asile de <em>Vincere</em>.</p>
+
+<p><b class="lead-in">L'enfermement, espace mental.</b> Chez Bellocchio, le lieu clos est la psyché du personnage. La maison de Bobbio des <em>Poings dans les poches</em>, château gothique où les miroirs captent l'angoisse. Le collège des jésuites d'<em>Au nom du père</em>, boîte mentale où naissent les hallucinations. L'appartement du <em>Saut dans le vide</em>, que la caméra parcourt comme une psyché, et dont on ne sort que par la fenêtre. L'appartement-prison de <em>Buongiorno, notte</em>. L'asile de <em>Vincere</em>.</p>
 <p>Foucault appelle ces lieux des hétérotopies. Bellocchio en fait des scènes intérieures : on y entre comme dans une tête, et ce qui s'y passe vaut pour tout le pays.</p>
 <blockquote class="pull">On entre dans ses lieux comme dans une tête.</blockquote>
 <h3>La folie, symptôme</h3>
 <p>La folie, c'est ce que cette famille-État ne peut pas intégrer : elle le déclare fou et l'enferme. Le pouvoir, c'est celui qui peut désigner qui est fou. Ida Dalser finit à l'asile parce qu'elle dérange le récit du Duce. Le lieu d'enfermement est donc aussi le lieu où l'Italie range ce qu'elle refoule.</p>
 <p>Le rêve, enfin, c'est l'inconscient qui revient : les archives et le cinéma dans la tête de Chiara. Famille, folie, enfermement, et le rêve pour langage : l'hypothèse est validée. Bellocchio fait, de film en film, la psychanalyse de l'Italie, à ciel ouvert.</p>
 <blockquote class="pull">Une psychanalyse de l'Italie, à ciel ouvert.</blockquote>
-<h3>Des images, et par les images</h3>
-<p>Plus précisément, Bellocchio est un psychanalyste des images, et par les images. Il analyse les images que l'Italie produit d'elle-même, et il les analyse avec des images.</p>
+
+<p><b class="lead-in">Des images, et par les images.</b> Plus précisément, Bellocchio est un psychanalyste des images, et par les images. Il analyse les images que l'Italie produit d'elle-même, et il les analyse avec des images.</p>
 <p>D'où, même dans les années tardives, son goût pour les faits divers : l'affaire Moro, Eluana Englaro, Tommaso Buscetta, Edgardo Mortara, Enzo Tortora. Des histoires qui ont obsédé le pays, ressassées par la presse et la télévision, comme des rêves collectifs. Il les reprend comme un analyste reprend le matériau de son patient.</p>
 <p>D'où son compagnonnage avec un psychanalyste, Massimo Fagioli, dont la méthode passe par l'interprétation des rêves, donc des images. Et d'où son focus sur la famille, la première scène où se forment nos images de l'autorité, du père à l'État.</p>
 <p class="aside">Une Italie désaccordée, dont il fait entendre les fausses notes.</p>
@@ -883,24 +881,22 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <li><a href="https://en.wikipedia.org/wiki/Todo_modo">Todo modo</a> : le film de Petri.</li>
 </ul>
 </section>
-  </main>
+</main>
 </div>
-
 <footer class="fin">
-  <b>Fine</b>
-  <span>Le cinéma italien d'après-guerre et Marco Bellocchio<br>Fenêtre ouverte sur le cinéma · novembre 2026</span>
-  <a class="top" href="#main">Revenir au début ↑</a>
+<b>Fine</b>
+<span>Le cinéma italien d'après-guerre et Marco Bellocchio<br/>Fenêtre ouverte sur le cinéma · novembre 2026</span>
+<a class="top" href="#main">Revenir au début ↑</a>
 </footer>
-
-<dialog class="drawer" id="drawer" aria-label="Sommaire">
-  <div class="drawer-head"><span>Sommaire</span><button type="button" id="close-toc">Fermer</button></div>
-  <nav class="toc"><ol><li class="t-part"><a href="#avant-propos">Avant-propos</a></li>
+<dialog aria-label="Sommaire" class="drawer" id="drawer">
+<div class="drawer-head"><span>Sommaire</span><button id="close-toc" type="button">Fermer</button></div>
+<nav class="toc"><ol><li class="t-part"><a href="#avant-propos">Avant-propos</a></li>
 <li class="t-part"><a href="#partie-1"><span>I</span>Pour quelques lires de plus</a></li>
 <li class="t-ch"><a href="#chapitre-01"><span>01</span>Des origines au fascisme</a></li>
-<li class="t-ch"><a href="#chapitre-02"><span>02</span>L&#x27;après-guerre : néoréalisme et évasion</a></li>
-<li class="t-ch"><a href="#chapitre-03"><span>03</span>Comédie à l&#x27;italienne et système des filons</a></li>
+<li class="t-ch"><a href="#chapitre-02"><span>02</span>L'après-guerre : néoréalisme et évasion</a></li>
+<li class="t-ch"><a href="#chapitre-03"><span>03</span>Comédie à l'italienne et système des filons</a></li>
 <li class="t-ch"><a href="#chapitre-04"><span>04</span>Le déclin : la faute de Berlusconi ?</a></li>
-<li class="t-part"><a href="#partie-2"><span>II</span>L&#x27;après-guerre : l&#x27;arte di arrangiarsi</a></li>
+<li class="t-part"><a href="#partie-2"><span>II</span>L'après-guerre : l'arte di arrangiarsi</a></li>
 <li class="t-ch"><a href="#chapitre-05"><span>05</span>Du fascisme au néoréalisme</a></li>
 <li class="t-ch"><a href="#chapitre-06"><span>06</span>Rome, ville ouverte</a></li>
 <li class="t-ch"><a href="#chapitre-07"><span>07</span>La fin du néoréalisme</a></li>
@@ -909,20 +905,19 @@ footer.fin b{font-family:var(--display);font-size:42px;letter-spacing:0;text-tra
 <li class="t-part"><a href="#partie-3"><span>III</span>Gros plan : Buongiorno, notte</a></li>
 <li class="t-ch"><a href="#chapitre-10"><span>10</span>Après le néoréalisme</a></li>
 <li class="t-ch"><a href="#chapitre-11"><span>11</span>Les années de plomb</a></li>
-<li class="t-ch"><a href="#chapitre-12"><span>12</span>L&#x27;affaire Moro</a></li>
+<li class="t-ch"><a href="#chapitre-12"><span>12</span>L'affaire Moro</a></li>
 <li class="t-ch"><a href="#chapitre-13"><span>13</span>Les entrées du film</a></li>
 <li class="t-ch"><a href="#chapitre-14"><span>14</span>Quelque chose de la cellule</a></li>
 <li class="t-ch"><a href="#chapitre-15"><span>15</span>Le cinéma comme medium</a></li>
-<li class="t-part"><a href="#partie-4"><span>IV</span>Marco Bellocchio ou l&#x27;Italie désaccordée</a></li>
-<li class="t-ch"><a href="#chapitre-16"><span>16</span>Un cinéaste dans l&#x27;histoire</a></li>
+<li class="t-part"><a href="#partie-4"><span>IV</span>Marco Bellocchio ou l'Italie désaccordée</a></li>
+<li class="t-ch"><a href="#chapitre-16"><span>16</span>Un cinéaste dans l'histoire</a></li>
 <li class="t-ch"><a href="#chapitre-17"><span>17</span>Les années de révolte</a></li>
 <li class="t-ch"><a href="#chapitre-18"><span>18</span>Le rêve et le désir</a></li>
-<li class="t-ch"><a href="#chapitre-19"><span>19</span>L&#x27;Italie mise en scène</a></li>
+<li class="t-ch"><a href="#chapitre-19"><span>19</span>L'Italie mise en scène</a></li>
 <li class="t-ch"><a href="#chapitre-20"><span>20</span>Soixante ans de cinéma</a></li>
 <li class="t-part"><a href="#conclusion">Conclusion générale</a></li>
 <li class="t-part"><a href="#annexes">Annexes</a></li></ol></nav>
 </dialog>
-
 <script>
 (function(){
   var drawer = document.getElementById('drawer');
